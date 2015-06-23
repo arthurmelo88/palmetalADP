@@ -1,0 +1,1113 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xb4ac21d4, pid=16274, tid=2037869424
+#
+# JRE version: 6.0_31-b31
+# Java VM: OpenJDK Server VM (23.25-b01 mixed mode linux-x86 )
+# Problematic frame:
+# J  sun.awt.X11.XGlobalCursorManager.updateGrabbedCursor(Ljava/awt/Cursor;)V
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-6/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x09690400):  JavaThread "AWT-EventQueue-1" [_thread_in_Java, id=16602, stack(0x79726000,0x79777000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000004
+
+Registers:
+EAX=0x00000000, EBX=0x85d69388, ECX=0x00000000, EDX=0xa515c900
+ESP=0x79775190, EBP=0x79775228, ESI=0x85a78918, EDI=0x86fc4ec8
+EIP=0xb4ac21d4, EFLAGS=0x00010246, CR2=0x00000004
+
+Top of Stack: (sp=0x79775190)
+0x79775190:   797751b0 7dea2b20 7f479e94 7dea0e10
+0x797751a0:   00000000 797751b0 797751d4 b46c2235
+0x797751b0:   b46c2235 797751b4 85cafcb0 797751fc
+0x797751c0:   7df214f0 7f478730 7df08fb0 00000000
+0x797751d0:   797751f8 79775228 b46c2235 0000003b
+0x797751e0:   00000000 00004000 79775228 b46c2235
+0x797751f0:   0560000d 00000000 b46c2235 85cafcb0
+0x79775200:   00000001 00000000 79775200 7df7013c 
+
+Instructions: (pc=0xb4ac21d4)
+0xb4ac21b4:   49 0c 8b 6c 24 30 45 85 3d 00 10 73 89 84 24 00
+0xb4ac21c4:   c0 ff ff 55 83 ec 58 89 4c 24 28 e8 ec 21 f8 ff
+0xb4ac21d4:   8b 58 04 8b 4b 38 81 f9 70 d7 f1 7d 0f 85 88 02
+0xb4ac21e4:   00 00 8b d0 bb a0 7d a9 85 8b 7b 08 85 ff 0f 84 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x85d69388 is an oop
+java.util.concurrent.locks.ReentrantLock$NonfairSync 
+ - klass: 'java/util/concurrent/locks/ReentrantLock$NonfairSync'
+ECX=0x00000000 is an unknown value
+EDX=0xa515c900 is an oop
+java.util.concurrent.locks.AbstractQueuedSynchronizer$Node 
+ - klass: 'java/util/concurrent/locks/AbstractQueuedSynchronizer$Node'
+ESP=0x79775190 is pointing into the stack for thread: 0x09690400
+EBP=0x79775228 is pointing into the stack for thread: 0x09690400
+ESI=0x85a78918 is an oop
+java.lang.Class 
+ - klass: 'java/lang/Class'
+EDI=0x86fc4ec8 is an oop
+java.awt.EventDispatchThread 
+ - klass: 'java/awt/EventDispatchThread'
+
+
+Stack: [0x79726000,0x79777000],  sp=0x79775190,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+J  sun.awt.X11.XGlobalCursorManager.updateGrabbedCursor(Ljava/awt/Cursor;)V
+j  sun.awt.GlobalCursorManager._updateCursor(Z)V+141
+j  sun.awt.GlobalCursorManager.updateCursorImmediately()V+27
+j  sun.awt.X11.XComponentPeer.updateCursorImmediately()V+3
+j  java.awt.Component.updateCursorImmediately()V+30
+j  java.awt.Container.validate()V+96
+j  javax.swing.RepaintManager$2.run()Ljava/lang/Void;+4
+j  javax.swing.RepaintManager$2.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x401854]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x314
+V  [libjvm.so+0x5c77b9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x40048f]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x44b676]  JVM_DoPrivileged+0x3c6
+C  [libjava.so+0xb33a]  Java_java_security_AccessController_doPrivileged__Ljava_security_PrivilegedAction_2Ljava_security_AccessControlContext_2+0x3a
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x09690400 JavaThread "AWT-EventQueue-1" [_thread_in_Java, id=16602, stack(0x79726000,0x79777000)]
+  0x08d3d800 JavaThread "DestroyJavaVM" [_thread_blocked, id=16279, stack(0xb76c7000,0xb7718000)]
+  0x09510400 JavaThread "InfoUpdater" [_thread_blocked, id=16341, stack(0x7920d000,0x7925e000)]
+  0x78e28000 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2" daemon [_thread_blocked, id=16331, stack(0x7905e000,0x790af000)]
+  0x78e24000 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1" daemon [_thread_blocked, id=16330, stack(0x790af000,0x79100000)]
+  0x7936d800 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0" daemon [_thread_blocked, id=16329, stack(0x796c3000,0x79714000)]
+  0x79370800 JavaThread "Timer-0" daemon [_thread_blocked, id=16328, stack(0x794af000,0x79500000)]
+  0x09542000 JavaThread "Thread-1" daemon [_thread_blocked, id=16309, stack(0x79621000,0x79672000)]
+  0x0934b400 JavaThread "TimerQueue" daemon [_thread_blocked, id=16308, stack(0x79672000,0x796c3000)]
+  0x79e01800 JavaThread "AWT-Shutdown" [_thread_blocked, id=16296, stack(0x797c8000,0x79819000)]
+  0x7a9ca000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=16295, stack(0x79819000,0x7986a000)]
+  0x08eccc00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=16292, stack(0x798da000,0x7992b000)]
+  0x08eabc00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=16288, stack(0x7ac2e000,0x7ac7f000)]
+  0x08eaa000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=16287, stack(0x7ac7f000,0x7ad00000)]
+  0x08ea8000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16286, stack(0x7ae11000,0x7ae92000)]
+  0x08ea6400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16285, stack(0x7ae92000,0x7aee3000)]
+  0x08e65800 JavaThread "Finalizer" daemon [_thread_blocked, id=16284, stack(0x7af22000,0x7af73000)]
+  0x08e63c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=16283, stack(0x7af73000,0x7afc4000)]
+
+Other Threads:
+  0x08e58800 VMThread [stack: 0x7afc4000,0x7b045000] [id=16282]
+  0x08eb6000 WatcherThread [stack: 0x7abad000,0x7ac2e000] [id=16289]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 15040K, used 6098K [0xa4ca0000, 0xa5ff0000, 0xb45f0000)
+  eden space 11072K, 43% used [0xa4ca0000,0xa515d0b8,0xa5770000)
+  from space 3968K, 31% used [0xa5c10000,0xa5d47a90,0xa5ff0000)
+  to   space 4352K, 0% used [0xa5770000,0xa5770000,0xa5bb0000)
+ ParOldGen       total 50304K, used 36257K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 72% used [0x859f0000,0x87d584b0,0x88b10000)
+ PSPermGen       total 46592K, used 28227K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f580f28,0x80770000)
+
+Card table byte_map: [0x7d839000,0x7d9f0000] byte_map_base: 0x7d44c080
+
+Polling page: 0xb7731000
+
+Code Cache  [0xb46bf000, 0xb4b77000, 0xb76bf000)
+ total_blobs=1927 nmethods=1606 adapters=272 free_code_cache=44475Kb largest_free_block=45401792
+
+Compilation events (10 events):
+Event: 609.680 Thread 0x08eaa000 1781             sun.awt.X11.XGlobalCursorManager::updateGrabbedCursor (22 bytes)
+Event: 609.708 Thread 0x08eaa000 nmethod 1781 0xb4ac1f48 code [0xb4ac21c0, 0xb4ac2be4]
+Event: 610.835 Thread 0x08ea8000 1782   !         sun.reflect.GeneratedMethodAccessor10::invoke (61 bytes)
+Event: 610.837 Thread 0x08ea8000 nmethod 1782 0xb4acef48 code [0xb4acf060, 0xb4acf150]
+Event: 619.859 Thread 0x08eaa000 1783             javax.swing.plaf.basic.BasicListUI::convertLocationToRow (186 bytes)
+Event: 619.867 Thread 0x08eaa000 nmethod 1783 0xb47e0b48 code [0xb47e0c60, 0xb47e0fbc]
+Event: 619.923 Thread 0x08ea8000 1784   !         sun.awt.ComponentAccessor::getLocation_NoClientCode (51 bytes)
+Event: 619.925 Thread 0x08ea8000 nmethod 1784 0xb49d2bc8 code [0xb49d2ce0, 0xb49d2df0]
+Event: 620.099 Thread 0x08eaa000 1785             javax.swing.TimerQueue::now (8 bytes)
+Event: 620.099 Thread 0x08eaa000 nmethod 1785 0xb47e0988 code [0xb47e0a60, 0xb47e0ab0]
+
+GC Heap History (10 events):
+Event: 591.460 GC heap before
+{Heap before GC invocations=95 (full 5):
+ PSYoungGen      total 14656K, used 11904K [0xa4ca0000, 0xa6120000, 0xb45f0000)
+  eden space 11904K, 100% used [0xa4ca0000,0xa5840000,0xa5840000)
+  from space 2752K, 0% used [0xa5880000,0xa5880000,0xa5b30000)
+  to   space 4544K, 0% used [0xa5cb0000,0xa5cb0000,0xa6120000)
+ ParOldGen       total 50304K, used 31429K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 62% used [0x859f0000,0x878a16b0,0x88b10000)
+ PSPermGen       total 46592K, used 28214K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57db10,0x80770000)
+Event: 591.471 GC heap after
+Heap after GC invocations=95 (full 5):
+ PSYoungGen      total 16128K, used 3333K [0xa4ca0000, 0xa6180000, 0xb45f0000)
+  eden space 11584K, 0% used [0xa4ca0000,0xa4ca0000,0xa57f0000)
+  from space 4544K, 73% used [0xa5cb0000,0xa5ff16f0,0xa6120000)
+  to   space 4864K, 0% used [0xa57f0000,0xa57f0000,0xa5cb0000)
+ ParOldGen       total 50304K, used 31429K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 62% used [0x859f0000,0x878a16b0,0x88b10000)
+ PSPermGen       total 46592K, used 28214K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57db10,0x80770000)
+}
+Event: 598.432 GC heap before
+{Heap before GC invocations=96 (full 5):
+ PSYoungGen      total 16128K, used 14917K [0xa4ca0000, 0xa6180000, 0xb45f0000)
+  eden space 11584K, 100% used [0xa4ca0000,0xa57f0000,0xa57f0000)
+  from space 4544K, 73% used [0xa5cb0000,0xa5ff16f0,0xa6120000)
+  to   space 4864K, 0% used [0xa57f0000,0xa57f0000,0xa5cb0000)
+ ParOldGen       total 50304K, used 31429K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 62% used [0x859f0000,0x878a16b0,0x88b10000)
+ PSPermGen       total 46592K, used 28220K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57f2a0,0x80770000)
+Event: 598.439 GC heap after
+Heap after GC invocations=96 (full 5):
+ PSYoungGen      total 11648K, used 299K [0xa4ca0000, 0xa6130000, 0xb45f0000)
+  eden space 11328K, 0% used [0xa4ca0000,0xa4ca0000,0xa57b0000)
+  from space 320K, 93% used [0xa57f0000,0xa583ae00,0xa5840000)
+  to   space 4864K, 0% used [0xa5c70000,0xa5c70000,0xa6130000)
+ ParOldGen       total 50304K, used 34623K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 68% used [0x859f0000,0x87bbfda0,0x88b10000)
+ PSPermGen       total 46592K, used 28220K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57f2a0,0x80770000)
+}
+Event: 598.642 GC heap before
+{Heap before GC invocations=97 (full 5):
+ PSYoungGen      total 11648K, used 11627K [0xa4ca0000, 0xa6130000, 0xb45f0000)
+  eden space 11328K, 100% used [0xa4ca0000,0xa57b0000,0xa57b0000)
+  from space 320K, 93% used [0xa57f0000,0xa583ae00,0xa5840000)
+  to   space 4864K, 0% used [0xa5c70000,0xa5c70000,0xa6130000)
+ ParOldGen       total 50304K, used 34623K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 68% used [0x859f0000,0x87bbfda0,0x88b10000)
+ PSPermGen       total 46592K, used 28221K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57f680,0x80770000)
+Event: 598.647 GC heap after
+Heap after GC invocations=97 (full 5):
+ PSYoungGen      total 16320K, used 608K [0xa4ca0000, 0xa62f0000, 0xb45f0000)
+  eden space 11456K, 0% used [0xa4ca0000,0xa4ca0000,0xa57d0000)
+  from space 4864K, 12% used [0xa5c70000,0xa5d08000,0xa6130000)
+  to   space 4736K, 0% used [0xa57d0000,0xa57d0000,0xa5c70000)
+ ParOldGen       total 50304K, used 34842K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 69% used [0x859f0000,0x87bf6ba0,0x88b10000)
+ PSPermGen       total 46592K, used 28221K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f57f680,0x80770000)
+}
+Event: 604.394 GC heap before
+{Heap before GC invocations=98 (full 5):
+ PSYoungGen      total 16320K, used 12064K [0xa4ca0000, 0xa62f0000, 0xb45f0000)
+  eden space 11456K, 100% used [0xa4ca0000,0xa57d0000,0xa57d0000)
+  from space 4864K, 12% used [0xa5c70000,0xa5d08000,0xa6130000)
+  to   space 4736K, 0% used [0xa57d0000,0xa57d0000,0xa5c70000)
+ ParOldGen       total 50304K, used 34842K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 69% used [0x859f0000,0x87bf6ba0,0x88b10000)
+ PSPermGen       total 46592K, used 28224K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f580128,0x80770000)
+Event: 604.402 GC heap after
+Heap after GC invocations=98 (full 5):
+ PSYoungGen      total 12288K, used 1024K [0xa4ca0000, 0xa6080000, 0xb45f0000)
+  eden space 11264K, 0% used [0xa4ca0000,0xa4ca0000,0xa57a0000)
+  from space 1024K, 100% used [0xa57d0000,0xa58d0000,0xa58d0000)
+  to   space 4544K, 0% used [0xa5c10000,0xa5c10000,0xa6080000)
+ ParOldGen       total 50304K, used 35390K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 70% used [0x859f0000,0x87c7fba0,0x88b10000)
+ PSPermGen       total 46592K, used 28224K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f580128,0x80770000)
+}
+Event: 607.658 GC heap before
+{Heap before GC invocations=99 (full 5):
+ PSYoungGen      total 12288K, used 12288K [0xa4ca0000, 0xa6080000, 0xb45f0000)
+  eden space 11264K, 100% used [0xa4ca0000,0xa57a0000,0xa57a0000)
+  from space 1024K, 100% used [0xa57d0000,0xa58d0000,0xa58d0000)
+  to   space 4544K, 0% used [0xa5c10000,0xa5c10000,0xa6080000)
+ ParOldGen       total 50304K, used 35390K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 70% used [0x859f0000,0x87c7fba0,0x88b10000)
+ PSPermGen       total 46592K, used 28226K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f580a50,0x80770000)
+Event: 607.666 GC heap after
+Heap after GC invocations=99 (full 5):
+ PSYoungGen      total 15040K, used 1246K [0xa4ca0000, 0xa5ff0000, 0xb45f0000)
+  eden space 11072K, 0% used [0xa4ca0000,0xa4ca0000,0xa5770000)
+  from space 3968K, 31% used [0xa5c10000,0xa5d47a90,0xa5ff0000)
+  to   space 4352K, 0% used [0xa5770000,0xa5770000,0xa5bb0000)
+ ParOldGen       total 50304K, used 36257K [0x859f0000, 0x88b10000, 0xa4ca0000)
+  object space 50304K, 72% used [0x859f0000,0x87d584b0,0x88b10000)
+ PSPermGen       total 46592K, used 28226K [0x7d9f0000, 0x80770000, 0x859f0000)
+  object space 46592K, 60% used [0x7d9f0000,0x7f580a50,0x80770000)
+}
+
+Deoptimization events (10 events):
+Event: 551.597 Thread 0x09690400 Uncommon trap -34 fr.pc 0xb48c720c
+Event: 591.544 Thread 0x09690400 Uncommon trap -83 fr.pc 0xb48b035c
+Event: 609.675 Thread 0x09690400 Uncommon trap -12 fr.pc 0xb4b19828
+Event: 617.515 Thread 0x7a9ca000 Uncommon trap -34 fr.pc 0xb4b41640
+Event: 617.515 Thread 0x09690400 Uncommon trap -34 fr.pc 0xb48ab3ac
+Event: 617.603 Thread 0x7a9ca000 Uncommon trap -34 fr.pc 0xb4b41668
+Event: 617.603 Thread 0x09690400 Uncommon trap -34 fr.pc 0xb48ab3ac
+Event: 617.675 Thread 0x7a9ca000 Uncommon trap -34 fr.pc 0xb4b41640
+Event: 617.675 Thread 0x09690400 Uncommon trap -34 fr.pc 0xb48ab3ac
+Event: 617.755 Thread 0x09690400 Uncommon trap -34 fr.pc 0xb48ab3ac
+
+Internal exceptions (10 events):
+Event: 552.026 Thread 0x78cb9800 Threw 0xa4d2b350 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 552.026 Thread 0x78cb9800 Threw 0xa4d2f3c8 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d33fb0 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d34f68 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d39330 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d396f8 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d3a6b0 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 552.027 Thread 0x78cb9800 Threw 0xa4d3eab0 at /build/buildd/openjdk-6-6b31-1.13.3/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1235
+Event: 609.675 Thread 0x09690400 Implicit null exception at 0xb4b19757 to 0xb4b19819
+Event: 623.699 Thread 0x09690400 Implicit null exception at 0xb4ac21d4 to 0x00000000
+
+Events (10 events):
+Event: 617.603 Thread 0x7a9ca000 DEOPT PACKING pc=0xb4b41668 sp=0x79868eb0
+Event: 617.603 Thread 0x7a9ca000 DEOPT UNPACKING pc=0xb46ebcbc sp=0x79868ed4 mode 2
+Event: 617.603 Thread 0x09690400 DEOPT PACKING pc=0xb48ab3ac sp=0x79775110
+Event: 617.603 Thread 0x09690400 DEOPT UNPACKING pc=0xb46ebcbc sp=0x79775104 mode 2
+Event: 617.675 Thread 0x7a9ca000 DEOPT PACKING pc=0xb4b41640 sp=0x79868eb0
+Event: 617.675 Thread 0x7a9ca000 DEOPT UNPACKING pc=0xb46ebcbc sp=0x79868ed4 mode 2
+Event: 617.675 Thread 0x09690400 DEOPT PACKING pc=0xb48ab3ac sp=0x79775110
+Event: 617.675 Thread 0x09690400 DEOPT UNPACKING pc=0xb46ebcbc sp=0x79775104 mode 2
+Event: 617.755 Thread 0x09690400 DEOPT PACKING pc=0xb48ab3ac sp=0x79775110
+Event: 617.755 Thread 0x09690400 DEOPT UNPACKING pc=0xb46ebcbc sp=0x79775104 mode 2
+
+
+Dynamic libraries:
+00110000-0026a000 r-xp 00000000 08:02 10752007   /lib/tls/i686/cmov/libc-2.11.1.so
+0026a000-0026b000 ---p 0015a000 08:02 10752007   /lib/tls/i686/cmov/libc-2.11.1.so
+0026b000-0026d000 r--p 0015a000 08:02 10752007   /lib/tls/i686/cmov/libc-2.11.1.so
+0026d000-0026e000 rw-p 0015c000 08:02 10752007   /lib/tls/i686/cmov/libc-2.11.1.so
+0026e000-00271000 rw-p 00000000 00:00 0 
+00271000-00295000 r-xp 00000000 08:02 10752020   /lib/tls/i686/cmov/libm-2.11.1.so
+00295000-00296000 r--p 00023000 08:02 10752020   /lib/tls/i686/cmov/libm-2.11.1.so
+00296000-00297000 rw-p 00024000 08:02 10752020   /lib/tls/i686/cmov/libm-2.11.1.so
+00297000-002bb000 r-xp 00000000 08:02 9962136    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+002bb000-002bc000 r--p 00023000 08:02 9962136    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+002bc000-002be000 rw-p 00024000 08:02 9962136    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+002be000-002d1000 r-xp 00000000 08:02 10754200   /lib/tls/i686/cmov/libnsl-2.11.1.so
+002d1000-002d2000 r--p 00012000 08:02 10754200   /lib/tls/i686/cmov/libnsl-2.11.1.so
+002d2000-002d3000 rw-p 00013000 08:02 10754200   /lib/tls/i686/cmov/libnsl-2.11.1.so
+002d3000-002d5000 rw-p 00000000 00:00 0 
+002d5000-002db000 r-xp 00000000 08:02 10754204   /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+002db000-002dc000 r--p 00006000 08:02 10754204   /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+002dc000-002dd000 rw-p 00007000 08:02 10754204   /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+002dd000-002e5000 r-xp 00000000 08:02 10748030   /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+002e5000-002e6000 r--p 00007000 08:02 10748030   /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+002e6000-002e7000 rw-p 00008000 08:02 10748030   /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+002e7000-002f1000 r-xp 00000000 08:02 10751988   /lib/tls/i686/cmov/libnss_files-2.11.1.so
+002f1000-002f2000 r--p 00009000 08:02 10751988   /lib/tls/i686/cmov/libnss_files-2.11.1.so
+002f2000-002f3000 rw-p 0000a000 08:02 10751988   /lib/tls/i686/cmov/libnss_files-2.11.1.so
+002f3000-002fa000 r-xp 00000000 08:02 9973013    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+002fa000-002fb000 r--p 00006000 08:02 9973013    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+002fb000-002fc000 rw-p 00007000 08:02 9973013    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+002fc000-00342000 r-xp 00000000 08:02 9979052    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+00342000-00343000 r--p 00045000 08:02 9979052    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+00343000-00345000 rw-p 00046000 08:02 9979052    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+00345000-00346000 rw-p 00000000 00:00 0 
+00346000-0034a000 r-xp 00000000 08:02 9440081    /usr/lib/libXtst.so.6.1.0
+0034a000-0034b000 r--p 00004000 08:02 9440081    /usr/lib/libXtst.so.6.1.0
+0034b000-0034c000 rw-p 00005000 08:02 9440081    /usr/lib/libXtst.so.6.1.0
+0034d000-00368000 r-xp 00000000 08:02 10755609   /lib/ld-2.11.1.so
+00368000-00369000 r--p 0001a000 08:02 10755609   /lib/ld-2.11.1.so
+00369000-0036a000 rw-p 0001b000 08:02 10755609   /lib/ld-2.11.1.so
+0036a000-00378000 r-xp 00000000 08:02 9439151    /usr/lib/libXext.so.6.4.0
+00378000-00379000 r--p 0000d000 08:02 9439151    /usr/lib/libXext.so.6.4.0
+00379000-0037a000 rw-p 0000e000 08:02 9439151    /usr/lib/libXext.so.6.4.0
+0037a000-00382000 r-xp 00000000 08:02 9439646    /usr/lib/libXrender.so.1.3.0
+00382000-00383000 r--p 00007000 08:02 9439646    /usr/lib/libXrender.so.1.3.0
+00383000-00384000 rw-p 00008000 08:02 9439646    /usr/lib/libXrender.so.1.3.0
+00384000-00391000 r-xp 00000000 08:02 9441047    /usr/lib/libXi.so.6.1.0
+00391000-00392000 r--p 0000c000 08:02 9441047    /usr/lib/libXi.so.6.1.0
+00392000-00393000 rw-p 0000d000 08:02 9441047    /usr/lib/libXi.so.6.1.0
+00393000-003ab000 r-xp 00000000 08:02 9437851    /usr/lib/libxcb.so.1.1.0
+003ab000-003ac000 r--p 00017000 08:02 9437851    /usr/lib/libxcb.so.1.1.0
+003ac000-003ad000 rw-p 00018000 08:02 9437851    /usr/lib/libxcb.so.1.1.0
+003ad000-003b1000 r-xp 00000000 08:02 9440054    /usr/lib/libXdmcp.so.6.0.0
+003b1000-003b2000 r--p 00003000 08:02 9440054    /usr/lib/libXdmcp.so.6.0.0
+003b2000-003b3000 rw-p 00004000 08:02 9440054    /usr/lib/libXdmcp.so.6.0.0
+003b3000-003bb000 r-xp 00000000 08:02 9440050    /usr/lib/libXcursor.so.1.0.2
+003bb000-003bc000 r--p 00007000 08:02 9440050    /usr/lib/libXcursor.so.1.0.2
+003bc000-003bd000 rw-p 00008000 08:02 9440050    /usr/lib/libXcursor.so.1.0.2
+003bd000-003c3000 r-xp 00000000 08:02 9975635    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmanagement.so
+003c3000-003c4000 r--p 00005000 08:02 9975635    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmanagement.so
+003c4000-003c5000 rw-p 00006000 08:02 9975635    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmanagement.so
+003c5000-003cb000 r-xp 00000000 08:02 9439497    /usr/lib/libkrb5support.so.0.1
+003cb000-003cc000 r--p 00005000 08:02 9439497    /usr/lib/libkrb5support.so.0.1
+003cc000-003cd000 rw-p 00006000 08:02 9439497    /usr/lib/libkrb5support.so.0.1
+003cd000-003cf000 r-xp 00000000 08:02 10754203   /lib/tls/i686/cmov/libdl-2.11.1.so
+003cf000-003d0000 r--p 00001000 08:02 10754203   /lib/tls/i686/cmov/libdl-2.11.1.so
+003d0000-003d1000 rw-p 00002000 08:02 10754203   /lib/tls/i686/cmov/libdl-2.11.1.so
+003d1000-00457000 r-xp 00000000 08:02 9973025    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libawt.so
+00457000-00458000 r--p 00086000 08:02 9973025    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libawt.so
+00458000-0045f000 rw-p 00087000 08:02 9973025    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libawt.so
+0045f000-00483000 rw-p 00000000 00:00 0 
+00483000-00497000 r-xp 00000000 08:02 9973041    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+00497000-00498000 r--p 00013000 08:02 9973041    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+00498000-00499000 rw-p 00014000 08:02 9973041    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnet.so
+00499000-004c6000 r-xp 00000000 08:02 9439105    /usr/lib/libgssapi_krb5.so.2.2
+004c6000-004c7000 r--p 0002d000 08:02 9439105    /usr/lib/libgssapi_krb5.so.2.2
+004c7000-004c8000 rw-p 0002e000 08:02 9439105    /usr/lib/libgssapi_krb5.so.2.2
+004c8000-004ca000 r-xp 00000000 08:02 10748000   /lib/libkeyutils-1.2.so
+004ca000-004cb000 r--p 00001000 08:02 10748000   /lib/libkeyutils-1.2.so
+004cb000-004cc000 rw-p 00002000 08:02 10748000   /lib/libkeyutils-1.2.so
+004ce000-004d0000 r-xp 00000000 08:02 9440043    /usr/lib/libXau.so.6.0.0
+004d0000-004d1000 r--p 00001000 08:02 9440043    /usr/lib/libXau.so.6.0.0
+004d1000-004d2000 rw-p 00002000 08:02 9440043    /usr/lib/libXau.so.6.0.0
+004d2000-004e0000 r-xp 00000000 08:02 9439006    /usr/lib/libavahi-client.so.3.2.5
+004e0000-004e1000 ---p 0000e000 08:02 9439006    /usr/lib/libavahi-client.so.3.2.5
+004e1000-004e2000 r--p 0000e000 08:02 9439006    /usr/lib/libavahi-client.so.3.2.5
+004e2000-004e3000 rw-p 0000f000 08:02 9439006    /usr/lib/libavahi-client.so.3.2.5
+004e3000-004e6000 r-xp 00000000 08:02 10747993   /lib/libgpg-error.so.0.4.0
+004e6000-004e7000 r--p 00002000 08:02 10747993   /lib/libgpg-error.so.0.4.0
+004e7000-004e8000 rw-p 00003000 08:02 10747993   /lib/libgpg-error.so.0.4.0
+004ea000-004f6000 r-xp 00000000 08:02 9977167    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+004f6000-004f7000 r--p 0000b000 08:02 9977167    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+004f7000-004f8000 rw-p 0000c000 08:02 9977167    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libverify.so
+004f8000-00611000 r-xp 00000000 08:02 9439032    /usr/lib/libX11.so.6.3.0
+00611000-00612000 r--p 00118000 08:02 9439032    /usr/lib/libX11.so.6.3.0
+00612000-00614000 rw-p 00119000 08:02 9439032    /usr/lib/libX11.so.6.3.0
+00614000-00615000 rw-p 00000000 00:00 0 
+00615000-00625000 r-xp 00000000 08:02 10754206   /lib/tls/i686/cmov/libresolv-2.11.1.so
+00625000-00626000 r--p 00010000 08:02 10754206   /lib/tls/i686/cmov/libresolv-2.11.1.so
+00626000-00627000 rw-p 00011000 08:02 10754206   /lib/tls/i686/cmov/libresolv-2.11.1.so
+00627000-00629000 rw-p 00000000 00:00 0 
+00629000-0062a000 r-xp 00000000 08:02 9973046    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/librmi.so
+0062a000-0062b000 r--p 00000000 08:02 9973046    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/librmi.so
+0062b000-0062c000 rw-p 00001000 08:02 9973046    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/librmi.so
+0062c000-0062e000 r-xp 00000000 08:02 10748025   /lib/libnss_mdns4_minimal.so.2
+0062e000-0062f000 r--p 00001000 08:02 10748025   /lib/libnss_mdns4_minimal.so.2
+0062f000-00630000 rw-p 00002000 08:02 10748025   /lib/libnss_mdns4_minimal.so.2
+00630000-00634000 r-xp 00000000 08:02 10751999   /lib/tls/i686/cmov/libnss_dns-2.11.1.so
+00634000-00635000 r--p 00004000 08:02 10751999   /lib/tls/i686/cmov/libnss_dns-2.11.1.so
+00635000-00636000 rw-p 00005000 08:02 10751999   /lib/tls/i686/cmov/libnss_dns-2.11.1.so
+00637000-00638000 r-xp 00000000 00:00 0          [vdso]
+00638000-00689000 r-xp 00000000 08:02 9973080    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+00689000-0068a000 r--p 00051000 08:02 9973080    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+0068a000-0068b000 rw-p 00052000 08:02 9973080    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+0068b000-006fc000 r-xp 00000000 08:02 9437608    /usr/lib/libfreetype.so.6.3.22
+006fc000-00700000 r--p 00070000 08:02 9437608    /usr/lib/libfreetype.so.6.3.22
+00700000-00701000 rw-p 00074000 08:02 9437608    /usr/lib/libfreetype.so.6.3.22
+00701000-00743000 r-xp 00000000 08:02 9439081    /usr/lib/libcups.so.2
+00743000-00744000 ---p 00042000 08:02 9439081    /usr/lib/libcups.so.2
+00744000-00747000 r--p 00042000 08:02 9439081    /usr/lib/libcups.so.2
+00747000-00748000 rw-p 00045000 08:02 9439081    /usr/lib/libcups.so.2
+00748000-0076a000 r-xp 00000000 08:02 9438861    /usr/lib/libk5crypto.so.3.1
+0076a000-0076b000 r--p 00021000 08:02 9438861    /usr/lib/libk5crypto.so.3.1
+0076b000-0076c000 rw-p 00022000 08:02 9438861    /usr/lib/libk5crypto.so.3.1
+0076c000-0077b000 r-xp 00000000 08:02 9439084    /usr/lib/libtasn1.so.3.1.7
+0077b000-0077c000 r--p 0000e000 08:02 9439084    /usr/lib/libtasn1.so.3.1.7
+0077c000-0077d000 rw-p 0000f000 08:02 9439084    /usr/lib/libtasn1.so.3.1.7
+00782000-0079f000 r-xp 00000000 08:02 10747986   /lib/libgcc_s.so.1
+0079f000-007a0000 r--p 0001c000 08:02 10747986   /lib/libgcc_s.so.1
+007a0000-007a1000 rw-p 0001d000 08:02 10747986   /lib/libgcc_s.so.1
+007a1000-00837000 r-xp 00000000 08:02 9437307    /usr/lib/libgnutls.so.26.14.12
+00837000-0083b000 r--p 00095000 08:02 9437307    /usr/lib/libgnutls.so.26.14.12
+0083b000-0083c000 rw-p 00099000 08:02 9437307    /usr/lib/libgnutls.so.26.14.12
+0083c000-00873000 r-xp 00000000 08:02 10748688   /lib/libdbus-1.so.3.4.0
+00873000-00874000 r--p 00036000 08:02 10748688   /lib/libdbus-1.so.3.4.0
+00874000-00875000 rw-p 00037000 08:02 10748688   /lib/libdbus-1.so.3.4.0
+0087c000-00883000 r-xp 00000000 08:02 9973024    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+00883000-00884000 r--p 00006000 08:02 9973024    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+00884000-00885000 rw-p 00007000 08:02 9973024    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libnio.so
+00885000-0092f000 r-xp 00000000 08:02 9439125    /usr/lib/libkrb5.so.3.3
+0092f000-00930000 ---p 000aa000 08:02 9439125    /usr/lib/libkrb5.so.3.3
+00930000-00935000 r--p 000aa000 08:02 9439125    /usr/lib/libkrb5.so.3.3
+00935000-00936000 rw-p 000af000 08:02 9439125    /usr/lib/libkrb5.so.3.3
+00936000-0093f000 r-xp 00000000 08:02 9977172    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjpeg.so
+0093f000-00940000 r--p 00008000 08:02 9977172    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjpeg.so
+00940000-00941000 rw-p 00009000 08:02 9977172    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjpeg.so
+00941000-00960000 r-xp 00000000 08:02 9439286    /usr/lib/libjpeg.so.62.0.0
+00960000-00961000 r--p 0001e000 08:02 9439286    /usr/lib/libjpeg.so.62.0.0
+00961000-00962000 rw-p 0001f000 08:02 9439286    /usr/lib/libjpeg.so.62.0.0
+0098e000-00991000 r-xp 00000000 08:02 9977169    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/jli/libjli.so
+00991000-00992000 r--p 00003000 08:02 9977169    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/jli/libjli.so
+00992000-00993000 rw-p 00004000 08:02 9977169    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/jli/libjli.so
+009ca000-009d1000 r-xp 00000000 08:02 10752013   /lib/tls/i686/cmov/librt-2.11.1.so
+009d1000-009d2000 r--p 00006000 08:02 10752013   /lib/tls/i686/cmov/librt-2.11.1.so
+009d2000-009d3000 rw-p 00007000 08:02 10752013   /lib/tls/i686/cmov/librt-2.11.1.so
+009f1000-00a04000 r-xp 00000000 08:02 10748102   /lib/libz.so.1.2.3.3
+00a04000-00a05000 r--p 00012000 08:02 10748102   /lib/libz.so.1.2.3.3
+00a05000-00a06000 rw-p 00013000 08:02 10748102   /lib/libz.so.1.2.3.3
+00a37000-00a3b000 r-xp 00000000 08:02 9440058    /usr/lib/libXfixes.so.3.1.0
+00a3b000-00a3c000 r--p 00003000 08:02 9440058    /usr/lib/libXfixes.so.3.1.0
+00a3c000-00a3d000 rw-p 00004000 08:02 9440058    /usr/lib/libXfixes.so.3.1.0
+00a58000-00b41000 r-xp 00000000 08:02 9437229    /usr/lib/libstdc++.so.6.0.13
+00b41000-00b45000 r--p 000e9000 08:02 9437229    /usr/lib/libstdc++.so.6.0.13
+00b45000-00b46000 rw-p 000ed000 08:02 9437229    /usr/lib/libstdc++.so.6.0.13
+00b46000-00b4d000 rw-p 00000000 00:00 0 
+00b51000-00b53000 r-xp 00000000 08:02 10747957   /lib/libcom_err.so.2.1
+00b53000-00b54000 r--p 00001000 08:02 10747957   /lib/libcom_err.so.2.1
+00b54000-00b55000 rw-p 00002000 08:02 10747957   /lib/libcom_err.so.2.1
+00ba3000-00bad000 r-xp 00000000 08:02 9438456    /usr/lib/libavahi-common.so.3.5.1
+00bad000-00bae000 r--p 00009000 08:02 9438456    /usr/lib/libavahi-common.so.3.5.1
+00bae000-00baf000 rw-p 0000a000 08:02 9438456    /usr/lib/libavahi-common.so.3.5.1
+00bb7000-00bcc000 r-xp 00000000 08:02 10754198   /lib/tls/i686/cmov/libpthread-2.11.1.so
+00bcc000-00bcd000 r--p 00014000 08:02 10754198   /lib/tls/i686/cmov/libpthread-2.11.1.so
+00bcd000-00bce000 rw-p 00015000 08:02 10754198   /lib/tls/i686/cmov/libpthread-2.11.1.so
+00bce000-00bd0000 rw-p 00000000 00:00 0 
+00bd0000-0135e000 r-xp 00000000 08:02 9973045    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/server/libjvm.so
+0135e000-013a5000 r--p 0078e000 08:02 9973045    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/server/libjvm.so
+013a5000-013b9000 rw-p 007d5000 08:02 9973045    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/server/libjvm.so
+013b9000-017d5000 rw-p 00000000 00:00 0 
+0787d000-078ed000 r-xp 00000000 08:02 10752036   /lib/libgcrypt.so.11.5.2
+078ed000-078ee000 r--p 00070000 08:02 10752036   /lib/libgcrypt.so.11.5.2
+078ee000-078f0000 rw-p 00071000 08:02 10752036   /lib/libgcrypt.so.11.5.2
+07dc3000-07e98000 r-xp 00000000 08:02 9973039    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmlib_image.so
+07e98000-07e99000 r--p 000d4000 08:02 9973039    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmlib_image.so
+07e99000-07e9a000 rw-p 000d5000 08:02 9973039    /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libmlib_image.so
+08048000-08051000 r-xp 00000000 08:02 9977194    /usr/lib/jvm/java-6-openjdk/jre/bin/java
+08051000-08052000 r--p 00008000 08:02 9977194    /usr/lib/jvm/java-6-openjdk/jre/bin/java
+08052000-08053000 rw-p 00009000 08:02 9977194    /usr/lib/jvm/java-6-openjdk/jre/bin/java
+08d25000-0a16b000 rw-p 00000000 00:00 0          [heap]
+759dc000-75d96000 rw-s 00000000 00:04 50364443   /SYSV00000000 (deleted)
+76400000-764f5000 rw-p 00000000 00:00 0 
+764f5000-76500000 ---p 00000000 00:00 0 
+76600000-766e0000 rw-p 00000000 00:00 0 
+766e0000-76700000 ---p 00000000 00:00 0 
+76700000-767fd000 rw-p 00000000 00:00 0 
+767fd000-76800000 ---p 00000000 00:00 0 
+76800000-768f9000 rw-p 00000000 00:00 0 
+768f9000-76900000 ---p 00000000 00:00 0 
+76900000-76a00000 rw-p 00000000 00:00 0 
+76a00000-76afd000 rw-p 00000000 00:00 0 
+76afd000-76b00000 ---p 00000000 00:00 0 
+76b00000-76bf0000 rw-p 00000000 00:00 0 
+76bf0000-76c00000 ---p 00000000 00:00 0 
+76c00000-76cec000 rw-p 00000000 00:00 0 
+76cec000-76d00000 ---p 00000000 00:00 0 
+76e00000-76fff000 rw-p 00000000 00:00 0 
+76fff000-77000000 ---p 00000000 00:00 0 
+77000000-77200000 rw-p 00000000 00:00 0 
+77200000-772fd000 rw-p 00000000 00:00 0 
+772fd000-77300000 ---p 00000000 00:00 0 
+77400000-775fb000 rw-p 00000000 00:00 0 
+775fb000-77600000 ---p 00000000 00:00 0 
+77600000-776f1000 rw-p 00000000 00:00 0 
+776f1000-77700000 ---p 00000000 00:00 0 
+77700000-777fa000 rw-p 00000000 00:00 0 
+777fa000-77800000 ---p 00000000 00:00 0 
+77800000-778fb000 rw-p 00000000 00:00 0 
+778fb000-77900000 ---p 00000000 00:00 0 
+77900000-779f5000 rw-p 00000000 00:00 0 
+779f5000-77a00000 ---p 00000000 00:00 0 
+77a00000-77afa000 rw-p 00000000 00:00 0 
+77afa000-77b00000 ---p 00000000 00:00 0 
+77b00000-77b90000 rw-p 00000000 00:00 0 
+77b90000-77c00000 ---p 00000000 00:00 0 
+77c00000-77cc7000 rw-p 00000000 00:00 0 
+77cc7000-77d00000 ---p 00000000 00:00 0 
+77d00000-77df2000 rw-p 00000000 00:00 0 
+77df2000-77e00000 ---p 00000000 00:00 0 
+77e00000-77efb000 rw-p 00000000 00:00 0 
+77efb000-77f00000 ---p 00000000 00:00 0 
+77f00000-78000000 rw-p 00000000 00:00 0 
+78000000-780ff000 rw-p 00000000 00:00 0 
+780ff000-78100000 ---p 00000000 00:00 0 
+78200000-78290000 rw-p 00000000 00:00 0 
+78290000-78300000 ---p 00000000 00:00 0 
+78300000-783d4000 rw-p 00000000 00:00 0 
+783d4000-78400000 ---p 00000000 00:00 0 
+78400000-784ee000 rw-p 00000000 00:00 0 
+784ee000-78500000 ---p 00000000 00:00 0 
+78500000-785fa000 rw-p 00000000 00:00 0 
+785fa000-78600000 ---p 00000000 00:00 0 
+78600000-786df000 rw-p 00000000 00:00 0 
+786df000-78700000 ---p 00000000 00:00 0 
+788c3000-78a00000 rw-p 00000000 00:00 0 
+78a00000-78aff000 rw-p 00000000 00:00 0 
+78aff000-78b00000 ---p 00000000 00:00 0 
+78baf000-78bb2000 ---p 00000000 00:00 0 
+78bb2000-78c00000 rw-p 00000000 00:00 0 
+78c00000-78cf6000 rw-p 00000000 00:00 0 
+78cf6000-78d00000 ---p 00000000 00:00 0 
+78d00000-78de8000 rw-p 00000000 00:00 0 
+78de8000-78e00000 ---p 00000000 00:00 0 
+78e00000-78eed000 rw-p 00000000 00:00 0 
+78eed000-78f00000 ---p 00000000 00:00 0 
+7900d000-79010000 ---p 00000000 00:00 0 
+79010000-7905e000 rw-p 00000000 00:00 0 
+7905e000-79061000 ---p 00000000 00:00 0 
+79061000-790af000 rw-p 00000000 00:00 0 
+790af000-790b2000 ---p 00000000 00:00 0 
+790b2000-79100000 rw-p 00000000 00:00 0 
+79100000-791fd000 rw-p 00000000 00:00 0 
+791fd000-79200000 ---p 00000000 00:00 0 
+7920d000-79210000 ---p 00000000 00:00 0 
+79210000-7925e000 rw-p 00000000 00:00 0 
+7925e000-79261000 ---p 00000000 00:00 0 
+79261000-792af000 rw-p 00000000 00:00 0 
+792af000-792b2000 ---p 00000000 00:00 0 
+792b2000-79300000 rw-p 00000000 00:00 0 
+79300000-793fb000 rw-p 00000000 00:00 0 
+793fb000-79400000 ---p 00000000 00:00 0 
+794af000-794b2000 ---p 00000000 00:00 0 
+794b2000-79500000 rw-p 00000000 00:00 0 
+79500000-795f8000 rw-p 00000000 00:00 0 
+795f8000-79600000 ---p 00000000 00:00 0 
+79621000-79624000 ---p 00000000 00:00 0 
+79624000-79672000 rw-p 00000000 00:00 0 
+79672000-79675000 ---p 00000000 00:00 0 
+79675000-796c3000 rw-p 00000000 00:00 0 
+796c3000-796c6000 ---p 00000000 00:00 0 
+796c6000-79714000 rw-p 00000000 00:00 0 
+79714000-79717000 r--s 00031000 08:02 9977158    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/sunjce_provider.jar
+79717000-79719000 r--s 00013000 08:02 9977149    /usr/lib/jvm/java-6-openjdk/jre/lib/jce.jar
+79719000-7971c000 r--s 00077000 08:02 9977163    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/localedata.jar
+79726000-79729000 ---p 00000000 00:00 0 
+79729000-79777000 rw-p 00000000 00:00 0 
+79777000-7977a000 ---p 00000000 00:00 0 
+7977a000-797c8000 rw-p 00000000 00:00 0 
+797c8000-797cb000 ---p 00000000 00:00 0 
+797cb000-79819000 rw-p 00000000 00:00 0 
+79819000-7981c000 ---p 00000000 00:00 0 
+7981c000-7986a000 rw-p 00000000 00:00 0 
+7986a000-79871000 r--s 00054000 08:02 9977164    /usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar
+79871000-79872000 r--s 00000000 08:02 5511189    /var/cache/fontconfig/26de28bc8622bbc1fb67fd234c21975f-le32d4.cache-3
+79872000-79873000 r--s 00000000 08:02 5505089    /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le32d4.cache-3
+79873000-79879000 r--s 00000000 08:02 5505086    /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d4.cache-3
+79879000-7987b000 r--s 00000000 08:02 5505087    /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le32d4.cache-3
+7987b000-7987e000 r--s 00000000 08:02 5505096    /var/cache/fontconfig/e383d7ea5fbe662a33d9b44caf393297-le32d4.cache-3
+7987e000-79884000 r--s 00000000 08:02 5511192    /var/cache/fontconfig/401a5dd6b567794a1d18dd9342dfa604-le32d4.cache-3
+79884000-79885000 r--s 00000000 08:02 5505097    /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le32d4.cache-3
+79885000-79888000 r--s 00000000 08:02 5505083    /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le32d4.cache-3
+79888000-79889000 r--s 00000000 08:02 5505079    /var/cache/fontconfig/4c73fe0c47614734b17d736dbde7580a-le32d4.cache-3
+79889000-7988a000 r--s 00000000 08:02 5505073    /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le32d4.cache-3
+7988a000-7988b000 r--s 00000000 08:02 5505081    /var/cache/fontconfig/6a53c69dea097a2d716e069445527da8-le32d4.cache-3
+7988b000-7988f000 r--s 00000000 08:02 5505088    /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le32d4.cache-3
+7988f000-79893000 r--s 00000000 08:02 5511210    /var/cache/fontconfig/515ca1ebc4b18308bea979be5704f9db-le32d4.cache-3
+79893000-7989a000 r--s 00000000 08:02 5512650    /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d4.cache-3
+7989a000-798a5000 r--s 00000000 08:02 5509078    /var/cache/fontconfig/0f34bcd4b6ee430af32735b75db7f02b-le32d4.cache-3
+798a5000-798a8000 r--s 00000000 08:02 5505093    /var/cache/fontconfig/d60319d88cac85ba9e1a07bd06cfbb8c-le32d4.cache-3
+798a8000-798ca000 r--s 00000000 08:02 5511801    /var/cache/fontconfig/365b55f210c0a22e9a19e35191240f32-le32d4.cache-3
+798ca000-798d2000 r--s 00000000 08:02 5505092    /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d4.cache-3
+798d2000-798da000 r--s 00000000 08:02 5516321    /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d4.cache-3
+798da000-798dd000 ---p 00000000 00:00 0 
+798dd000-7992b000 rw-p 00000000 00:00 0 
+7992b000-7993e000 r--s 001bd000 08:05 4849668    /home/augusto/Documentos/workspace/adempierelbrHEAD/lib/itextpdf-5.4.1.jar
+7993e000-79945000 r--s 000b5000 08:05 14947149   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/mysql-connector-java-5.1.13-bin.jar
+79945000-79960000 r--s 00158000 08:05 14947173   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/poi-3.5-FINAL-20090928.jar
+79960000-79993000 r--s 002a1000 08:05 14949150   /home/augusto/workspace_aplicacao/adempiereTrunk/JasperReportsTools/lib/jasperreports-3.7.3.jar
+79993000-79995000 r--s 00007000 08:05 14947175   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/cron4j-2.2.1.jar
+79995000-79998000 r--s 00015000 08:05 14947162   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/payflow.jar
+79998000-7999a000 r--s 00011000 08:05 14947180   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/miglayout-3.7.1-swing.jar
+7999a000-799a6000 r--s 00108000 08:05 14947178   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/iText-2.1.7.jar
+799a6000-799ac000 r--s 00054000 08:05 14948432   /home/augusto/workspace_aplicacao/adempiereTrunk/packages/liberoMFG.jar
+799ac000-799ad000 r--s 0000e000 08:05 14948431   /home/augusto/workspace_aplicacao/adempiereTrunk/packages/liberoHR.jar
+799ad000-799b0000 r--s 00011000 08:05 14950824   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/servlet.jar
+799b0000-799b7000 r--s 00051000 08:05 14950834   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/log4j-1.2.13.jar
+799b7000-799b9000 r--s 00002000 08:05 14950836   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/displaytag-export-poi-1.1.1.jar
+799b9000-799bb000 r--s 00013000 08:05 14948467   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkplus-sources.jar
+799bb000-799bd000 r--s 00004000 08:05 14950829   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/commons-fileupload.jar
+799bd000-799c2000 r--s 0002c000 08:05 14948466   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zweb.jar
+799c2000-799c7000 r--s 00030000 08:05 14950830   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/displaytag-1.1.1.jar
+799c7000-799ca000 r--s 0001b000 08:05 14947191   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/junit.jar
+799ca000-799cd000 r--s 0001a000 08:05 14948482   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/junit.jar
+799cd000-799ce000 r--s 00001000 08:05 14948485   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/keylistener.jar
+799ce000-799d2000 r--s 0001a000 08:05 14947147   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/testing/SuperCSV-with_src-1.52.jar
+799d2000-799d3000 r--s 00003000 08:05 14947148   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/testing/spiffy-with_source-all-0.05.jar
+799d3000-799d7000 r--s 0001d000 08:05 14950828   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/barcode4j.jar
+799d7000-799dc000 r--s 00018000 08:05 14950833   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/aspectjrt.jar
+799dc000-799de000 r--s 00000000 08:05 14950832   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/aop.jar
+799de000-799e7000 r--s 00078000 08:05 14950825   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/struts.jar
+799e7000-799e9000 r--s 00013000 08:05 14950831   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/posterita/web/WEB-INF/lib/commons-validator.jar
+799e9000-79a05000 r--s 001b3000 08:05 14951416   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/reference/aspectJ/aspectjweaver.jar
+79a05000-79a68000 r--s 0077c000 08:05 14951414   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/reference/aspectJ/aspectjtools.jar
+79a68000-79a69000 r--s 00001000 08:05 14951415   /home/augusto/workspace_aplicacao/adempiereTrunk/posterita/reference/aspectJ/aspectjlib.jar
+79a69000-79a6c000 r--s 0001d000 08:05 14948481   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zweb-sources.jar
+79a6c000-79a73000 r--s 00077000 08:05 14948458   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zul-sources.jar
+79a73000-79a74000 r--s 00001000 08:05 14948456   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zml-sources.jar
+79a74000-79a7c000 r--s 0008f000 08:05 14948449   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zk-sources.jar
+79a7c000-79a7e000 r--s 0000d000 08:05 14948487   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkex-sources.jar
+79a7e000-79a83000 r--s 0003e000 08:05 14948489   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zcommon-sources.jar
+79a83000-79a85000 r--s 00004000 08:05 14948475   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/timelinez-sources.jar
+79a85000-79aee000 r--s 007c6000 08:05 14948452   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/jython.jar
+79aee000-79b15000 r--s 00291000 08:05 14948479   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/groovy.jar
+79b15000-79b18000 r--s 0000c000 08:05 14948459   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/commons-fileupload.jar
+79b18000-79b1d000 r--s 00040000 08:05 14948471   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/bsh.jar
+79b1d000-79b1e000 r--s 00002000 08:05 14948488   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zml.jar
+79b1e000-79b21000 r--s 00017000 08:05 14948457   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkplus.jar
+79b21000-79b26000 r--s 00024000 08:05 14948453   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkmax-sources.jar
+79b26000-79b2c000 r--s 00031000 08:05 14948483   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkmax.jar
+79b2c000-79b30000 r--s 00021000 08:05 14948476   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zkex.jar
+79b30000-79b32000 r--s 0000b000 08:05 14948472   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zhtml-sources.jar
+79b32000-79b35000 r--s 0000a000 08:05 14948461   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zhtml.jar
+79b35000-79b38000 r--s 00016000 08:05 14948465   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zcommons-el.jar
+79b38000-79b3e000 r--s 00040000 08:05 14948463   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/timelinez.jar
+79b3e000-79b42000 r--s 00026000 08:05 14948462   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/ognl.jar
+79b42000-79b4d000 r--s 00107000 08:05 14948490   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/mvel.jar
+79b4d000-79b58000 r--s 000a6000 08:05 14948460   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/jxl.jar
+79b58000-79b59000 r--s 00003000 08:05 14948455   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/json_simple.jar
+79b59000-79b60000 r--s 000b2000 08:05 14948470   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/js.jar
+79b60000-79bfa000 r--s 007cb000 08:05 14948484   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/jruby.jar
+79bfa000-79bfd000 r--s 00017000 08:05 14948486   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/gmapsz.jar
+79bfd000-79c03000 r--s 0004d000 08:05 14948450   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/Filters.jar
+79c03000-79c11000 r--s 0014a000 08:05 14948464   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/fckez.jar
+79c11000-79c14000 r--s 00012000 08:05 14948473   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/commons-io.jar
+79c14000-79c17000 r--s 00019000 08:05 14948468   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/commons-el.jar
+79c17000-79c18000 r--s 00008000 08:05 14948474   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/asm.jar
+79c18000-79c2a000 r--s 000eb000 08:05 14948451   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zul.jar
+79c2a000-79c38000 r--s 000cd000 08:05 14948478   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zk.jar
+79c38000-79c3f000 r--s 0005a000 08:05 14948477   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/zcommon.jar
+79c3f000-79c45000 r--s 00049000 08:05 14948454   /home/augusto/workspace_aplicacao/adempiereTrunk/zkwebui/WEB-INF/lib/cglib.jar
+79c45000-79d37000 r--s 00e06000 08:05 14944719   /home/augusto/workspace_aplicacao/adempiereTrunk/glassfishfacet/lib/appserv-rt.jar
+79d37000-79d3c000 r--s 00031000 08:05 14944717   /home/augusto/workspace_aplicacao/adempiereTrunk/glassfishfacet/lib/appserv-deployment-client.jar
+79d3c000-79d4d000 r--s 00083000 08:05 14944718   /home/augusto/workspace_aplicacao/adempiereTrunk/glassfishfacet/lib/appserv-ext.jar
+79d4d000-79dab000 r--s 00467000 08:05 14942900   /home/augusto/workspace_aplicacao/adempiereTrunk/jboss/client/jbossall-client.jar
+79dab000-79dad000 r--s 00007000 08:05 14942955   /home/augusto/workspace_aplicacao/adempiereTrunk/jboss/client/jnp-client.jar
+79dad000-79db1000 r--s 00021000 08:05 14942892   /home/augusto/workspace_aplicacao/adempiereTrunk/jboss/client/jbosssx-client.jar
+79db1000-79e00000 r--s 00734000 08:05 14949149   /home/augusto/workspace_aplicacao/adempiereTrunk/JasperReportsTools/lib/iReport.jar
+79e00000-79f00000 rw-p 00000000 00:00 0 
+79f00000-79f01000 r--s 00000000 08:02 5505089    /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le32d4.cache-3
+79f01000-79f07000 r--s 00000000 08:02 5505086    /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d4.cache-3
+79f07000-79f09000 r--s 00000000 08:02 5505087    /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le32d4.cache-3
+79f09000-79f0c000 r--s 00000000 08:02 5505096    /var/cache/fontconfig/e383d7ea5fbe662a33d9b44caf393297-le32d4.cache-3
+79f0c000-79f12000 r--s 00000000 08:02 5511192    /var/cache/fontconfig/401a5dd6b567794a1d18dd9342dfa604-le32d4.cache-3
+79f12000-79f13000 r--s 00000000 08:02 5505097    /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le32d4.cache-3
+79f13000-79f16000 r--s 00000000 08:02 5505083    /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le32d4.cache-3
+79f16000-79f17000 r--s 00000000 08:02 5505079    /var/cache/fontconfig/4c73fe0c47614734b17d736dbde7580a-le32d4.cache-3
+79f17000-79f18000 r--s 00000000 08:02 5505073    /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le32d4.cache-3
+79f18000-79f19000 r--s 00000000 08:02 5505081    /var/cache/fontconfig/6a53c69dea097a2d716e069445527da8-le32d4.cache-3
+79f19000-79f1d000 r--s 00000000 08:02 5505088    /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le32d4.cache-3
+79f1d000-79f21000 r--s 00000000 08:02 5511210    /var/cache/fontconfig/515ca1ebc4b18308bea979be5704f9db-le32d4.cache-3
+79f21000-79f28000 r--s 00000000 08:02 5512650    /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d4.cache-3
+79f28000-79f4a000 r--s 00000000 08:02 5511801    /var/cache/fontconfig/365b55f210c0a22e9a19e35191240f32-le32d4.cache-3
+79f4a000-79f4d000 r--s 00014000 08:05 14946693   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-validator-1.2.0.jar
+79f4d000-79f51000 r--s 0002f000 08:05 14946692   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-lang-2.1.jar
+79f51000-79f53000 r--s 00004000 08:05 14946694   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-fileupload.jar
+79f53000-79f57000 r--s 0001f000 08:05 14946697   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-digester-1.7.jar
+79f57000-79f59000 r--s 0000a000 08:05 14946690   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-codec-1.3.jar
+79f59000-79f5d000 r--s 00026000 08:05 14946689   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-beanutils-core.jar
+79f5d000-79f5f000 r--s 00005000 08:05 14946695   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-beanutils-bean-collections.jar
+79f5f000-79f64000 r--s 0002a000 08:05 14946696   /home/augusto/workspace_aplicacao/adempiereTrunk/serverApps/src/web/WEB-INF/lib/commons-beanutils.jar
+79f64000-79f75000 r--s 0014c000 08:05 14947171   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jfreechart-1.0.13.jar
+79f75000-79f7b000 r--s 00046000 08:05 14947164   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jcommon-1.0.16.jar
+79f7b000-79f98000 r--s 000f4000 08:05 14947170   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/javaee.jar
+79f98000-79f9b000 r--s 00014000 08:05 14947201   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/barbecue-1.5-beta1.jar
+79f9b000-79f9c000 r--s 00003000 08:05 14947155   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/script-api.jar
+79f9c000-79f9d000 r--s 00002000 08:05 14947183   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jython-engine.jar
+79f9d000-79fb9000 r--s 001be000 08:05 14947154   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jython.jar
+79fb9000-79fba000 r--s 00002000 08:05 14947167   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/groovy-engine.jar
+79fba000-79fe1000 r--s 00281000 08:05 14947193   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/groovy-all-1.5.1.jar
+79fe1000-79fe2000 r--s 00001000 08:05 14947184   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/bsh-engine.jar
+79fe2000-79fe7000 r--s 00058000 08:05 14947177   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/bsh-2.0b5.jar
+79fe7000-7a000000 r--s 00123000 08:05 14947186   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/swingx-1.6.jar
+7a000000-7a100000 rw-p 00000000 00:00 0 
+7a100000-7a101000 rw-p 00000000 00:00 0 
+7a101000-7a102000 r--s 00000000 08:02 5512140    /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le32d4.cache-3
+7a102000-7a105000 r--s 00000000 08:02 5511157    /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le32d4.cache-3
+7a105000-7a110000 r--s 00000000 08:02 5509078    /var/cache/fontconfig/0f34bcd4b6ee430af32735b75db7f02b-le32d4.cache-3
+7a110000-7a118000 r--s 00000000 08:02 5505092    /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d4.cache-3
+7a118000-7a120000 r--s 00000000 08:02 5516321    /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d4.cache-3
+7a120000-7a12c000 r--s 0015c000 08:05 14947195   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jpedal.jar
+7a12c000-7a134000 r--s 00028000 08:05 14947192   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/xml-apis.jar
+7a134000-7a137000 r--s 00036000 08:05 14947172   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/xjavadoc-1.1.jar
+7a137000-7a14d000 r--s 00110000 08:05 14947182   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/xercesImpl.jar
+7a14d000-7a155000 r--s 00053000 08:05 14947189   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/looks-2.0.4.jar
+7a155000-7a17a000 r--s 001e5000 08:05 14947174   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/activemq-core-5.0.0.jar
+7a17a000-7a17b000 r--s 00000000 08:05 14947185   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/c3p0-oracle-thin-extras-0.9.1.2.jar
+7a17b000-7a186000 r--s 0008b000 08:05 14947151   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/c3p0-0.9.1.2.jar
+7a186000-7a18c000 r--s 00077000 08:05 14947181   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/postgresql.jar
+7a18c000-7a18f000 r--s 00023000 08:05 14947153   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jgraph.jar
+7a18f000-7a194000 r--s 00028000 08:05 14947194   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/commons-net-1.4.0.jar
+7a194000-7a196000 r--s 0000c000 08:05 14947197   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/commons-logging.jar
+7a196000-7a1a3000 r--s 0007c000 08:05 14947188   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/commons-collections-3.1.jar
+7a1a3000-7a1a4000 r--s 00001000 08:05 14947200   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jnlp.jar
+7a1a4000-7a1a7000 r--s 0000d000 08:05 14947190   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jpayment.jar
+7a1a7000-7a1b9000 r--s 001f2000 08:05 14947150   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/ojdbc6.jar
+7a1b9000-7a1bb000 r--s 00014000 08:05 14947169   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/servlet-api.jar
+7a1bb000-7a1be000 r--s 00012000 08:05 14947199   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jsp-api.jar
+7a1be000-7a1cd000 r--s 000ee000 08:05 14947163   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/ant.jar
+7a1cd000-7a1ce000 r--s 00002000 08:05 14947161   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/ant-launcher.jar
+7a1ce000-7a1cf000 r--s 00008000 08:05 14947157   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/ant-commons-net.jar
+7a1cf000-7a1d4000 r--s 00030000 08:05 14942675   /home/augusto/workspace_aplicacao/adempiereTrunk/jboss/lib/commons-httpclient.jar
+7a1d4000-7a1d5000 r--s 00004000 08:05 14947166   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/Verisign.jar
+7a1d5000-7a1de000 r--s 00058000 08:05 14947176   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/standard.jar
+7a1de000-7a1e5000 r--s 0006a000 08:05 14947187   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/mail.jar
+7a1e5000-7a1ec000 r--s 00050000 08:05 14947159   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/log4j.jar
+7a1ec000-7a1ee000 r--s 00004000 08:05 14947156   /home/augusto/workspace_aplicacao/adempiereTrunk/tools/lib/jstl.jar
+7a1ee000-7a221000 r--s 002a1000 08:05 3540754    /home/augusto/workspace_aplicacao/adempiere_360/JasperReportsTools/lib/jasperreports-3.7.3.jar
+7a221000-7a223000 r--s 00007000 08:05 1442874    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/cron4j-2.2.1.jar
+7a223000-7a226000 r--s 00015000 08:05 1442862    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/payflow.jar
+7a226000-7a228000 r--s 00011000 08:05 1442880    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/miglayout-3.7.1-swing.jar
+7a228000-7a234000 r--s 00108000 08:05 1442877    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/iText-2.1.7.jar
+7a234000-7a237000 r--s 00011000 08:05 13370387   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/servlet.jar
+7a237000-7a255000 r--s 00192000 08:05 13370390   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/poi-3.0-FINAL.jar
+7a255000-7a25c000 r--s 00051000 08:05 13370397   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/log4j-1.2.13.jar
+7a25c000-7a25e000 r--s 00002000 08:05 13370399   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/displaytag-export-poi-1.1.1.jar
+7a25e000-7a260000 r--s 00013000 08:05 3408453    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkplus-sources.jar
+7a260000-7a262000 r--s 00004000 08:05 13370392   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/commons-fileupload.jar
+7a262000-7a267000 r--s 0002c000 08:05 3408452    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zweb.jar
+7a267000-7a26c000 r--s 00030000 08:05 13370393   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/displaytag-1.1.1.jar
+7a26c000-7a26f000 r--s 0001b000 08:05 1442891    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/junit.jar
+7a26f000-7a272000 r--s 0001a000 08:05 3408468    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/junit.jar
+7a272000-7a273000 r--s 00001000 08:05 3408471    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/keylistener.jar
+7a273000-7a277000 r--s 0001a000 08:05 1442835    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/testing/SuperCSV-with_src-1.52.jar
+7a277000-7a278000 r--s 00003000 08:05 1442836    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/testing/spiffy-with_source-all-0.05.jar
+7a278000-7a27c000 r--s 0001d000 08:05 13370391   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/barcode4j.jar
+7a27c000-7a281000 r--s 00018000 08:05 13370396   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/aspectjrt.jar
+7a281000-7a283000 r--s 00000000 08:05 13370395   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/aop.jar
+7a283000-7a28c000 r--s 00078000 08:05 13370388   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/struts.jar
+7a28c000-7a28e000 r--s 00013000 08:05 13370394   /home/augusto/workspace_aplicacao/adempiere_360/posterita/posterita/web/WEB-INF/lib/commons-validator.jar
+7a28e000-7a2aa000 r--s 001b3000 08:05 13372031   /home/augusto/workspace_aplicacao/adempiere_360/posterita/reference/aspectJ/aspectjweaver.jar
+7a2aa000-7a30d000 r--s 0077c000 08:05 13372029   /home/augusto/workspace_aplicacao/adempiere_360/posterita/reference/aspectJ/aspectjtools.jar
+7a30d000-7a30e000 r--s 00001000 08:05 13372030   /home/augusto/workspace_aplicacao/adempiere_360/posterita/reference/aspectJ/aspectjlib.jar
+7a30e000-7a311000 r--s 0001d000 08:05 3408467    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zweb-sources.jar
+7a311000-7a318000 r--s 00077000 08:05 3408444    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zul-sources.jar
+7a318000-7a319000 r--s 00001000 08:05 3408442    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zml-sources.jar
+7a319000-7a321000 r--s 0008f000 08:05 3408435    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zk-sources.jar
+7a321000-7a323000 r--s 0000d000 08:05 3408473    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkex-sources.jar
+7a323000-7a328000 r--s 0003e000 08:05 3408475    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zcommon-sources.jar
+7a328000-7a32a000 r--s 00004000 08:05 3408461    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/timelinez-sources.jar
+7a32a000-7a393000 r--s 007c6000 08:05 3408438    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/jython.jar
+7a393000-7a3ba000 r--s 00291000 08:05 3408465    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/groovy.jar
+7a3ba000-7a3bd000 r--s 0000c000 08:05 3408445    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/commons-fileupload.jar
+7a3bd000-7a3c2000 r--s 00040000 08:05 3408457    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/bsh.jar
+7a3c2000-7a3c3000 r--s 00002000 08:05 3408474    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zml.jar
+7a3c3000-7a3c6000 r--s 00017000 08:05 3408443    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkplus.jar
+7a3c6000-7a3cb000 r--s 00024000 08:05 3408439    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkmax-sources.jar
+7a3cb000-7a3d1000 r--s 00031000 08:05 3408469    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkmax.jar
+7a3d1000-7a3d5000 r--s 00021000 08:05 3408462    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zkex.jar
+7a3d5000-7a3d7000 r--s 0000b000 08:05 3408458    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zhtml-sources.jar
+7a3d7000-7a3da000 r--s 0000a000 08:05 3408447    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zhtml.jar
+7a3da000-7a3dd000 r--s 00016000 08:05 3408451    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zcommons-el.jar
+7a3dd000-7a3e3000 r--s 00040000 08:05 3408449    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/timelinez.jar
+7a3e3000-7a3e7000 r--s 00026000 08:05 3408448    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/ognl.jar
+7a3e7000-7a3f2000 r--s 00107000 08:05 3408476    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/mvel.jar
+7a3f2000-7a3fd000 r--s 000a6000 08:05 3408446    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/jxl.jar
+7a3fd000-7a3fe000 r--s 00003000 08:05 3408441    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/json_simple.jar
+7a3fe000-7a405000 r--s 000b2000 08:05 3408456    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/js.jar
+7a405000-7a49f000 r--s 007cb000 08:05 3408470    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/jruby.jar
+7a49f000-7a4a2000 r--s 00017000 08:05 3408472    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/gmapsz.jar
+7a4a2000-7a4a8000 r--s 0004d000 08:05 3408436    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/Filters.jar
+7a4a8000-7a4b6000 r--s 0014a000 08:05 3408450    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/fckez.jar
+7a4b6000-7a4b9000 r--s 00012000 08:05 3408459    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/commons-io.jar
+7a4b9000-7a4bc000 r--s 00019000 08:05 3408454    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/commons-el.jar
+7a4bc000-7a4bd000 r--s 00008000 08:05 3408460    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/asm.jar
+7a4bd000-7a4cf000 r--s 000eb000 08:05 3408437    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zul.jar
+7a4cf000-7a4dd000 r--s 000cd000 08:05 3408464    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zk.jar
+7a4dd000-7a4e4000 r--s 0005a000 08:05 3408463    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/zcommon.jar
+7a4e4000-7a4ea000 r--s 00049000 08:05 3408440    /home/augusto/workspace_aplicacao/adempiere_360/zkwebui/WEB-INF/lib/cglib.jar
+7a4ea000-7a5dc000 r--s 00e06000 08:05 13897718   /home/augusto/workspace_aplicacao/adempiere_360/glassfishfacet/lib/appserv-rt.jar
+7a5dc000-7a5e1000 r--s 00031000 08:05 13897716   /home/augusto/workspace_aplicacao/adempiere_360/glassfishfacet/lib/appserv-deployment-client.jar
+7a5e1000-7a5f2000 r--s 00083000 08:05 13897717   /home/augusto/workspace_aplicacao/adempiere_360/glassfishfacet/lib/appserv-ext.jar
+7a5f2000-7a650000 r--s 00467000 08:05 13763383   /home/augusto/workspace_aplicacao/adempiere_360/jboss/client/jbossall-client.jar
+7a650000-7a652000 r--s 00007000 08:05 13763438   /home/augusto/workspace_aplicacao/adempiere_360/jboss/client/jnp-client.jar
+7a652000-7a656000 r--s 00021000 08:05 13763375   /home/augusto/workspace_aplicacao/adempiere_360/jboss/client/jbosssx-client.jar
+7a656000-7a6a5000 r--s 00734000 08:05 3540753    /home/augusto/workspace_aplicacao/adempiere_360/JasperReportsTools/lib/iReport.jar
+7a6a5000-7a6a8000 r--s 00014000 08:05 14028590   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-validator-1.2.0.jar
+7a6a8000-7a6ac000 r--s 0002f000 08:05 14028589   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-lang-2.1.jar
+7a6ac000-7a6ae000 r--s 00004000 08:05 14028591   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-fileupload.jar
+7a6ae000-7a6b2000 r--s 0001f000 08:05 14028594   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-digester-1.7.jar
+7a6b2000-7a6b4000 r--s 0000a000 08:05 14028587   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-codec-1.3.jar
+7a6b4000-7a6b8000 r--s 00026000 08:05 14028586   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-beanutils-core.jar
+7a6b8000-7a6ba000 r--s 00005000 08:05 14028592   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-beanutils-bean-collections.jar
+7a6ba000-7a6bf000 r--s 0002a000 08:05 14028593   /home/augusto/workspace_aplicacao/adempiere_360/serverApps/src/web/WEB-INF/lib/commons-beanutils.jar
+7a6bf000-7a6d0000 r--s 0014c000 08:05 1442871    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jfreechart-1.0.13.jar
+7a6d0000-7a6d6000 r--s 00046000 08:05 1442864    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jcommon-1.0.16.jar
+7a6d6000-7a6f3000 r--s 000f4000 08:05 1442870    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/javaee.jar
+7a6f3000-7a700000 r--s 000d1000 08:05 1442882    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/poi-3.0.1-FINAL-20070705.jar
+7a700000-7a800000 rw-p 00000000 00:00 0 
+7a800000-7a801000 r--s 00000000 08:02 5511189    /var/cache/fontconfig/26de28bc8622bbc1fb67fd234c21975f-le32d4.cache-3
+7a801000-7a804000 r--s 00000000 08:02 5505093    /var/cache/fontconfig/d60319d88cac85ba9e1a07bd06cfbb8c-le32d4.cache-3
+7a804000-7a805000 r--s 00000000 08:02 5512140    /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le32d4.cache-3
+7a805000-7a808000 r--s 00014000 08:05 1442901    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/barbecue-1.5-beta1.jar
+7a808000-7a809000 r--s 00003000 08:05 1442855    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/script-api.jar
+7a809000-7a80a000 r--s 00002000 08:05 1442883    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jython-engine.jar
+7a80a000-7a826000 r--s 001be000 08:05 1442854    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jython.jar
+7a826000-7a827000 r--s 00002000 08:05 1442867    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/groovy-engine.jar
+7a827000-7a84e000 r--s 00281000 08:05 1442893    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/groovy-all-1.5.1.jar
+7a84e000-7a853000 r--s 00058000 08:05 1442876    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/bsh-2.0b5.jar
+7a853000-7a86c000 r--s 00123000 08:05 1442886    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/swingx-1.6.jar
+7a86c000-7a878000 r--s 0015c000 08:05 1442895    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jpedal.jar
+7a878000-7a880000 r--s 00028000 08:05 1442892    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/xml-apis.jar
+7a880000-7a883000 r--s 00036000 08:05 1442872    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/xjavadoc-1.1.jar
+7a883000-7a899000 r--s 00110000 08:05 1442881    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/xercesImpl.jar
+7a899000-7a8a1000 r--s 00053000 08:05 1442889    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/looks-2.0.4.jar
+7a8a1000-7a8c6000 r--s 001e5000 08:05 1442873    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/activemq-core-5.0.0.jar
+7a8c6000-7a8d1000 r--s 0008b000 08:05 1442851    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/c3p0-0.9.1.2.jar
+7a8d1000-7a8d7000 r--s 00077000 08:05 1442879    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/postgresql.jar
+7a8d7000-7a8da000 r--s 00023000 08:05 1442853    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jgraph.jar
+7a8da000-7a8df000 r--s 00028000 08:05 1442894    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/commons-net-1.4.0.jar
+7a8df000-7a8e1000 r--s 0000c000 08:05 1442897    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/commons-logging.jar
+7a8e1000-7a8ee000 r--s 0007c000 08:05 1442888    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/commons-collections-3.1.jar
+7a8ee000-7a900000 r--s 001f2000 08:05 1442850    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/ojdbc6.jar
+7a900000-7a9f4000 rw-p 00000000 00:00 0 
+7a9f4000-7aa00000 ---p 00000000 00:00 0 
+7aa00000-7aa0f000 r--s 000ee000 08:05 1442863    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/ant.jar
+7aa0f000-7aa10000 r--s 00002000 08:05 1442861    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/ant-launcher.jar
+7aa10000-7aa11000 r--s 00008000 08:05 1442857    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/ant-commons-net.jar
+7aa11000-7aa16000 r--s 00030000 08:05 13636346   /home/augusto/workspace_aplicacao/adempiere_360/jboss/lib/commons-httpclient.jar
+7aa16000-7aa17000 r--s 00004000 08:05 1442866    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/Verisign.jar
+7aa17000-7aa20000 r--s 00058000 08:05 1442875    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/standard.jar
+7aa20000-7aa27000 r--s 0006a000 08:05 1442887    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/mail.jar
+7aa27000-7aa2e000 r--s 00050000 08:05 1442859    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/log4j.jar
+7aa2e000-7aa30000 r--s 00004000 08:05 1442856    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jstl.jar
+7aa30000-7aa31000 r--s 0000a000 08:05 4849677    /home/augusto/Documentos/workspace/adempierelbrHEAD/lib/arial.jar
+7aa31000-7aa37000 r--s 0005b000 08:05 4852189    /home/augusto/Documentos/workspace/adempierelbrHEAD/lib/jcifs-1.3.17.jar
+7aa37000-7aa3a000 r--s 00019000 08:05 14288322   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/DSGEBrazilUtils.jar
+7aa3a000-7aa40000 r--s 00045000 08:05 14288272   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/commons-httpclient-3.1.jar
+7aa40000-7aa41000 r--s 00007000 08:05 14288276   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-xmlbeans-1.5.4.jar
+7aa41000-7aa42000 r--s 00004000 08:05 14288267   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-transport-local-1.5.4.jar
+7aa42000-7aa45000 r--s 00023000 08:05 14288275   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-transport-http-1.5.4.jar
+7aa45000-7aa47000 r--s 00015000 08:05 14288262   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-saaj-1.5.4.jar
+7aa47000-7aa4f000 r--s 00059000 08:05 14288265   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-metadata-1.5.4.jar
+7aa4f000-7aa5c000 r--s 000e8000 08:05 14288264   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-kernel-1.5.4.jar
+7aa5c000-7aa69000 r--s 00092000 08:05 14288271   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-jaxws-1.5.4.jar
+7aa69000-7aa74000 r--s 000b4000 08:05 14288269   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axis2-adb-1.5.4.jar
+7aa74000-7aa77000 r--s 0001b000 08:05 14288274   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axiom-impl-1.2.10.jar
+7aa77000-7aa7a000 r--s 00024000 08:05 14288263   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axiom-dom-1.2.10.jar
+7aa7a000-7aa83000 r--s 0005d000 08:05 14288277   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/axiom-api-1.2.10.jar
+7aa83000-7aa87000 r--s 0001f000 08:05 14288270   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/XmlSchema-1.4.3.jar
+7aa87000-7aa8c000 r--s 00020000 08:05 14288266   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/wsdl4j-1.6.2.jar
+7aa8c000-7aa8e000 r--s 00007000 08:05 14288268   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/neethi-2.0.4.jar
+7aa8e000-7aa93000 r--s 00026000 08:05 14288273   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/ws/httpcore-4.0.jar
+7aa93000-7aa98000 r--s 00040000 08:05 14288327   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/bsh-2.0b4.jar
+7aa98000-7aaa7000 r--s 00074000 08:05 14288324   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/joda-time-1.6.jar
+7aaa7000-7aab2000 r--s 0005f000 08:05 14288328   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/xstream-1.3.1.jar
+7aab2000-7aab8000 r--s 00060000 08:05 14288325   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/dom4j.jar
+7aab8000-7aac7000 r--s 0031f000 08:05 14288234   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/PDFBox-0.7.3.jar
+7aac7000-7aac9000 r--s 0002b000 08:05 14288323   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/rtextpr.jar
+7aac9000-7aacb000 r--s 00096000 08:05 14288326   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/jBoleto.jar
+7aacb000-7aacd000 r--s 00009000 08:05 14288239   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/JempBox-0.2.0.jar
+7aacd000-7aacf000 r--s 0000f000 08:05 14288237   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/FontBox-0.2.0-dev.jar
+7aacf000-7aae9000 r--s 00133000 08:05 14288236   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/checkstyle-all-4.2.jar
+7aae9000-7ab01000 r--s 000eb000 08:05 14288238   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/bcprov-jdk14-132.jar
+7ab01000-7ab05000 r--s 00024000 08:05 14288235   /home/augusto/workspace_aplicacao/adempierelbrHEAD/lib/PDFBox/bcmail-jdk14-132.jar
+7ab05000-7ab16000 r--s 00181000 08:05 14680409   /home/augusto/workspace_aplicacao/palmetal_to_lbrk/lib/xalan.jar
+7ab16000-7ab49000 r--s 002a1000 08:05 14680410   /home/augusto/workspace_aplicacao/palmetal_to_lbrk/lib/jasperreports-3.7.3.jar
+7ab49000-7abad000 r--s 005b2000 08:05 14680411   /home/augusto/workspace_aplicacao/palmetal_to_lbrk/lib/groovy-all-2.1.8-20131014.144905-25.jar
+7abad000-7abae000 ---p 00000000 00:00 0 
+7abae000-7ac2e000 rw-p 00000000 00:00 0 
+7ac2e000-7ac31000 ---p 00000000 00:00 0 
+7ac31000-7ac7f000 rw-p 00000000 00:00 0 
+7ac7f000-7ac82000 ---p 00000000 00:00 0 
+7ac82000-7ad00000 rw-p 00000000 00:00 0 
+7ad00000-7adff000 rw-p 00000000 00:00 0 
+7adff000-7ae00000 ---p 00000000 00:00 0 
+7ae00000-7ae03000 r--s 00000000 08:02 5511157    /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le32d4.cache-3
+7ae03000-7ae04000 r--s 00001000 08:05 1442884    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/bsh-engine.jar
+7ae04000-7ae08000 r--s 0003c000 08:02 9977145    /usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar
+7ae08000-7ae0b000 r--s 0000d000 08:05 1442890    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jpayment.jar
+7ae0b000-7ae11000 r--s 0004e000 08:02 9961748    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/jcifs-1.2.13.jar
+7ae11000-7ae14000 ---p 00000000 00:00 0 
+7ae14000-7ae92000 rw-p 00000000 00:00 0 
+7ae92000-7ae95000 ---p 00000000 00:00 0 
+7ae95000-7aee3000 rw-p 00000000 00:00 0 
+7aee3000-7af22000 r--p 00000000 08:02 9445025    /usr/lib/locale/pt_BR.utf8/LC_CTYPE
+7af22000-7af25000 ---p 00000000 00:00 0 
+7af25000-7af73000 rw-p 00000000 00:00 0 
+7af73000-7af76000 ---p 00000000 00:00 0 
+7af76000-7afc4000 rw-p 00000000 00:00 0 
+7afc4000-7afc5000 ---p 00000000 00:00 0 
+7afc5000-7b078000 rw-p 00000000 00:00 0 
+7b078000-7b20f000 r--s 01a14000 08:02 9961697    /usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar
+7b20f000-7d5fd000 rw-p 00000000 00:00 0 
+7d5fd000-7d5fe000 ---p 00000000 00:00 0 
+7d5fe000-7d67e000 rw-p 00000000 00:00 0 
+7d67e000-7d67f000 ---p 00000000 00:00 0 
+7d67f000-7d716000 rw-p 00000000 00:00 0 
+7d716000-7d73f000 rw-p 00000000 00:00 0 
+7d73f000-7d758000 rw-p 00000000 00:00 0 
+7d758000-7d839000 rw-p 00000000 00:00 0 
+7d839000-7d850000 rw-p 00000000 00:00 0 
+7d850000-7d879000 rw-p 00000000 00:00 0 
+7d879000-7d892000 rw-p 00000000 00:00 0 
+7d892000-7d972000 rw-p 00000000 00:00 0 
+7d972000-7d97c000 rw-p 00000000 00:00 0 
+7d97c000-7d97f000 ---p 00000000 00:00 0 
+7d97f000-7d9ef000 rw-p 00000000 00:00 0 
+7d9ef000-80770000 rw-p 00000000 00:00 0 
+80770000-859f0000 rw-p 00000000 00:00 0 
+859f0000-88b10000 rw-p 00000000 00:00 0 
+88b10000-a4ca0000 rw-p 00000000 00:00 0 
+a4ca0000-a5ff0000 rw-p 00000000 00:00 0 
+a5ff0000-a6480000 ---p 00000000 00:00 0 
+a6480000-b45f0000 rw-p 00000000 00:00 0 
+b45f0000-b45f1000 r--s 00000000 08:05 1442885    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/c3p0-oracle-thin-extras-0.9.1.2.jar
+b45f1000-b45f2000 r--s 00001000 08:05 1442900    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jnlp.jar
+b45f2000-b45f4000 r--s 00014000 08:05 1442869    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/servlet-api.jar
+b45f4000-b45f9000 r--s 00028000 08:02 9961725    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/commons-net-1.4.1.jar
+b45f9000-b45ff000 r--s 0007e000 08:02 9961762    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/postgresql-9.0-801.jdbc4.jar
+b45ff000-b4612000 rw-p 00000000 00:00 0 
+b4612000-b46bf000 rw-p 00000000 00:00 0 
+b46bf000-b4b77000 rwxp 00000000 00:00 0 
+b4b77000-b76bf000 rw-p 00000000 00:00 0 
+b76bf000-b76c7000 rw-s 00000000 08:02 9841546    /tmp/hsperfdata_augusto/16274
+b76c7000-b76ca000 ---p 00000000 00:00 0 
+b76ca000-b771b000 rw-p 00000000 00:00 0 
+b771b000-b771e000 r--s 00012000 08:05 1442899    /home/augusto/workspace_aplicacao/adempiere_360/tools/lib/jsp-api.jar
+b771e000-b7723000 r--s 0003b000 08:02 9961753    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/mailapi.jar
+b7723000-b7725000 r--s 0000f000 08:02 9977159    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/pulse-java.jar
+b7725000-b7729000 r--s 00047000 08:02 9961824    /usr/lib/jvm/java-6-openjdk/jre/lib/ext/jtds-1.2.2.jar
+b7729000-b7730000 r--s 00000000 08:02 9458735    /usr/lib/gconv/gconv-modules.cache
+b7730000-b7731000 rw-p 00000000 00:00 0 
+b7731000-b7732000 r--p 00000000 00:00 0 
+b7732000-b7734000 rw-p 00000000 00:00 0 
+bfec7000-bfee1000 rw-p 00000000 00:00 0          [stack]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: org.compiere.Adempiere
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/pgsql/bin
+USERNAME=augusto
+LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/jvm/java-6-openjdk/jre/../lib/i386:/usr/lib/jvm/java-6-openjdk/jre/lib/i386/client:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/xulrunner-addons:/usr/lib/xulrunner-addons
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x717a60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x717a60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5c9220], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGXFSZ: [libjvm.so+0x5c9220], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5c9220], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5c8ca0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5cc2a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x5cc2a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x5cc2a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5cc2a0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 10.04 (lucid)
+uname:Linux 2.6.32-62-generic #126-Ubuntu SMP Fri Jul 4 20:20:04 UTC 2014 i686
+libc:glibc 2.11.1 NPTL 2.11.1 
+rlimit: STACK 8192k, CORE 0k, NPROC infinity, NOFILE 1024, AS infinity
+load average:0.53 0.71 0.79
+
+/proc/meminfo:
+MemTotal:        3058544 kB
+MemFree:           83728 kB
+Buffers:           15112 kB
+Cached:           349192 kB
+SwapCached:        21704 kB
+Active:          2049396 kB
+Inactive:         806552 kB
+Active(anon):    1967004 kB
+Inactive(anon):   720772 kB
+Active(file):      82392 kB
+Inactive(file):    85780 kB
+Unevictable:           4 kB
+Mlocked:               4 kB
+HighTotal:       2197724 kB
+HighFree:           2784 kB
+LowTotal:         860820 kB
+LowFree:           80944 kB
+SwapTotal:       3998712 kB
+SwapFree:        3193648 kB
+Dirty:               216 kB
+Writeback:             0 kB
+AnonPages:       2482504 kB
+Mapped:           108612 kB
+Shmem:            196124 kB
+Slab:              56400 kB
+SReclaimable:      29808 kB
+SUnreclaim:        26592 kB
+KernelStack:        4936 kB
+PageTables:        13280 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5527984 kB
+Committed_AS:    5584496 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       37880 kB
+VmallocChunk:      64328 kB
+HardwareCorrupted:     0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       4096 kB
+DirectMap4k:       16376 kB
+DirectMap4M:      892928 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Duo CPU     E7500  @ 2.93GHz
+stepping	: 10
+cpu MHz		: 1596.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm tpr_shadow vnmi flexpriority
+bogomips	: 5867.57
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Duo CPU     E7500  @ 2.93GHz
+stepping	: 10
+cpu MHz		: 1596.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm tpr_shadow vnmi flexpriority
+bogomips	: 5866.47
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3058544k(83728k free), swap 3998712k(3193648k free)
+
+vm_info: OpenJDK Server VM (23.25-b01) for linux-x86 JRE (1.6.0_31-b31), built on Apr 17 2014 22:11:35 by "buildd" with gcc 4.4.3
+
+time: Fri Jul 11 15:59:06 2014
+elapsed time: 623 seconds
+

@@ -1,0 +1,23 @@
+INSERT INTO C_Tax(c_tax_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, name, updatedby, description, taxindicator, isdocumentlevel, validfrom, issummary, requirestaxcertificate, rate, parent_tax_id, c_country_id, c_region_id, to_country_id, to_region_id, c_taxcategory_id, isdefault, istaxexempt, sopotype, issalestax, ad_rule_id, lbr_taxname_id, lbr_taxgroup_id)
+  VALUES(2000004, 2000000, 2000000, 'Y', '2011-10-11 11:32:50.0', 100, '2013-02-22 10:32:31.0', 'COFINS', 100, NULL, NULL, 'N', '2011-01-01 00:00:00.0', 'N', 'N', 0, 2000000, 139, 465, NULL, NULL, 2000000, 'N', 'N', 'B', 'N', NULL, 1106002, 1120002);
+INSERT INTO C_Tax(c_tax_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, name, updatedby, description, taxindicator, isdocumentlevel, validfrom, issummary, requirestaxcertificate, rate, parent_tax_id, c_country_id, c_region_id, to_country_id, to_region_id, c_taxcategory_id, isdefault, istaxexempt, sopotype, issalestax, ad_rule_id, lbr_taxname_id, lbr_taxgroup_id)
+  VALUES(2000005, 2000000, 2000000, 'Y', '2011-10-11 11:32:58.0', 100, '2013-02-22 10:32:35.0', 'ICMS', 100, NULL, NULL, 'N', '2011-01-01 00:00:00.0', 'N', 'N', 0, 2000000, 139, 465, NULL, NULL, 2000000, 'N', 'N', 'B', 'N', NULL, 1106000, 1120000);
+INSERT INTO C_Tax(c_tax_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, name, updatedby, description, taxindicator, isdocumentlevel, validfrom, issummary, requirestaxcertificate, rate, parent_tax_id, c_country_id, c_region_id, to_country_id, to_region_id, c_taxcategory_id, isdefault, istaxexempt, sopotype, issalestax, ad_rule_id, lbr_taxname_id, lbr_taxgroup_id)
+  VALUES(2000006, 2000000, 2000000, 'Y', '2013-02-19 15:33:23.0', 100, '2013-02-22 10:32:38.0', 'ICMSST', 100, NULL, NULL, 'N', '2011-01-01 00:00:00.0', 'N', 'N', 0, 2000000, 139, NULL, NULL, NULL, 2000000, 'N', 'N', 'B', 'N', NULL, 1106012, 1120007);
+INSERT INTO C_Tax(c_tax_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, name, updatedby, description, taxindicator, isdocumentlevel, validfrom, issummary, requirestaxcertificate, rate, parent_tax_id, c_country_id, c_region_id, to_country_id, to_region_id, c_taxcategory_id, isdefault, istaxexempt, sopotype, issalestax, ad_rule_id, lbr_taxname_id, lbr_taxgroup_id)
+  VALUES(2000007, 2000000, 2000000, 'Y', '2011-10-11 11:32:37.0', 100, '2013-02-22 10:32:47.0', 'PIS', 100, NULL, NULL, 'N', '2011-01-01 00:00:00.0', 'N', 'N', 0, 2000000, 139, 465, NULL, NULL, 2000000, 'N', 'N', 'B', 'N', NULL, 1106001, 1120001);
+INSERT INTO C_Tax(c_tax_id, ad_client_id, ad_org_id, isactive, created, createdby, updated, name, updatedby, description, taxindicator, isdocumentlevel, validfrom, issummary, requirestaxcertificate, rate, parent_tax_id, c_country_id, c_region_id, to_country_id, to_region_id, c_taxcategory_id, isdefault, istaxexempt, sopotype, issalestax, ad_rule_id, lbr_taxname_id, lbr_taxgroup_id)
+  VALUES(2000008, 2000000, 2000000, 'Y', '2013-03-01 11:08:26.0', 100, '2013-03-01 11:09:01.0', 'IVA', 100, NULL, NULL, 'N', '2011-01-01 00:00:00.0', 'N', 'N', 0, 2000000, 139, 465, NULL, NULL, 2000000, 'N', 'N', 'B', 'N', NULL, 1106013, NULL);
+
+  
+
+INSERT INTO C_Tax_Trl(c_tax_id, ad_language, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, istranslated, name, description, taxindicator)
+  VALUES(2000007, 'pt_BR', 2000000, 2000000, 'Y', '2011-10-11 11:32:37.0', 100, '2011-10-11 11:32:37.0', 100, 'N', 'PIS', NULL, NULL);
+INSERT INTO C_Tax_Trl(c_tax_id, ad_language, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, istranslated, name, description, taxindicator)
+  VALUES(2000004, 'pt_BR', 2000000, 2000000, 'Y', '2011-10-11 11:32:50.0', 100, '2011-10-11 11:32:50.0', 100, 'N', 'COFINS', NULL, NULL);
+INSERT INTO C_Tax_Trl(c_tax_id, ad_language, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, istranslated, name, description, taxindicator)
+  VALUES(2000005, 'pt_BR', 2000000, 2000000, 'Y', '2011-10-11 11:32:58.0', 100, '2011-10-11 11:32:58.0', 100, 'N', 'ICMS', NULL, NULL);
+INSERT INTO C_Tax_Trl(c_tax_id, ad_language, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, istranslated, name, description, taxindicator)
+  VALUES(2000006, 'pt_BR', 2000000, 2000000, 'Y', '2013-02-19 15:33:23.0', 100, '2013-02-19 15:33:23.0', 100, 'N', 'ICMSST', NULL, NULL);
+INSERT INTO C_Tax_Trl(c_tax_id, ad_language, ad_client_id, ad_org_id, isactive, created, createdby, updated, updatedby, istranslated, name, description, taxindicator)
+  VALUES(2000008, 'pt_BR', 2000000, 2000000, 'Y', '2013-03-01 11:08:26.0', 100, '2013-03-01 11:08:26.0', 100, 'N', 'IVA', NULL, NULL);

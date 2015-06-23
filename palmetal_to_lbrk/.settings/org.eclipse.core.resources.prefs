@@ -1,0 +1,6 @@
+#Tue Apr 30 09:35:49 BRT 2013
+eclipse.preferences.version=1
+encoding//dbPort/src/org/adempierelbr/model/X_LBR_CCe.java=US-ASCII
+encoding//dbPort/src/org/adempierelbr/model/X_LBR_NotaFiscalLine.java=UTF-8
+encoding//nfe2/src/org/adempierelbr/process/ProcGenerateNFEXml.java=UTF-8
+encoding//nfe2/src/org/adempierelbr/util/NFeUtil.java=UTF-8

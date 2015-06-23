@@ -1,0 +1,467 @@
+data/nfe/src/org/adempierelbr/nfe/v200/beans/prot/NFeProtBean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Charge.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentNFE.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfigProduct.java.i
+data/base/src/org/adempierelbr/model/MLBRNFLineTax.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/CobrancaGrupoFatura.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nferetrecepcao2/NfeRetRecepcao2Stub.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/xmldsig-core-schema_v1.01.xsd.i
+data/base/src/org/adempierelbr/util/AdempiereLBR.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_ProductionPlan.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/cadconsultacadastro2/CadConsultaCadastro2CallbackHandler.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MHsbc.java.i
+data/jboleto/src/img/409.png.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteCancNFe_v2.00.xsd.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_DigitalCertificate.java.i
+data/base/src/org/compiere/model/MOrderLine.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/CCe_v1.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/NFeLRetiradaBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/retorno/ProtNFeBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/NFeInutilizacao.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_Product.java.i
+data/boleto/src/org/adempierelbr/apps/form/VFormCNAB.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeRetRecepcao2.wsdl.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/tiposBasico_v1.03.xsd.i
+data/base/src/org/adempierelbr/validator/VLBROrder.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_BankAccount.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/procNFe_v2.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN500Bean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/NFeInfNFeBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ImpostoIPIBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/Informacoes.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/008-ColunaValidFrom.sql.i
+data/base/src/org/compiere/util/Language.java.i
+data/base/src/org/adempierelbr/validator/ValidatorOrder.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteConsultaCadastro_v2.00.xsd.i
+data/migration/to_lbrk/parte 3/069-Organizacao0NaoExibedanaNFeLot.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeLacreBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ICMSBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/NFeDetBean.java.i
+data/nfe2/src/org/adempierelbr/model/MLBRNFeLot.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_Movement.java.i
+data/base/src/org/adempierelbr/annotation/XMLFieldProperties.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeRecepcao2.wsdl.i
+data/jboleto/src/img/237.png.i
+data/jboleto/src/org/jboleto/bancos/Santander_033.java.i
+data/migration/to_lbrk/parte 3/70-CodigosCSOSN.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteVol.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/ConsultaNFBean.java.i
+data/nfe/src/org/adempierelbr/nfe/annotations/NFeGroup.java.i
+data/base/src/org/adempierelbr/annotation/Validate.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/converters/PISConverter.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeTranspBean.java.i
+data/base/src/org/compiere/model/GridTable.java.i
+data/jboleto/src/org/jboleto/control/PDFGenerator.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/NFeCOFINSOutrBean.java.i
+data/base/src/org/adempierelbr/process/ProcGenerateNF.java.i
+data/cce/src/reports/ReportCCe.jrxml.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteRetencao.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/01_Insert_Tab_CFOP_IN_DocumentType.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ChaveNFE.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeStatusServico2.wsdl.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/prod/NFeDIBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/cobranca/NFeDupBean.java.i
+data/base/src/org/adempierelbr/model/MLBRISSMatrix.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/AdicoesDI.java.i
+data/nfe2/src/org/adempierelbr/process/ProcConsultaCadastro.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/DetailsNFEBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/inutilizacao/InutNFeBean.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MItau.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/07_ADD_Field_LBR_RecalculateTax.sql.i
+data/migration/to_lbrk/parte 3/058-LBR-39_WebService_Eventos.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/NFePISQtde.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/COFINSFactory.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/NFEBean.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/cadconsultacadastro2/CadConsultaCadastro2Stub.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/nfe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/util/ValidaXML.java.i
+data/boleto/src/org/adempierelbr/apps/form/WGenCNAB.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeRetTranspBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/CobrancaGrupoDuplicata.java.i
+data/base/src/org/compiere/model/MInvoiceLine.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TributosInciBean.java.i
+data/nfe2/src/org/adempierelbr/grid/CreateFromNFeLot.java.i
+data/base/src/org/adempierelbr/model/MLBRNotaFiscal.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ImpostoDIBean.java.i
+data/nfe2/src/org/adempierelbr/model/MLBRNFeWebService.java.i
+data/migration/to_lbrk/parte 3/061-NFeStatus-2011.003.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/emit/NFeEndEmitBean.java.i
+data/base/src/org/adempierelbr/process/ProcCancelNF.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/901-Auxiliar_Para_Transferir_As_Taxas-Manual.sql.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/cancNFe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ICMSGrupoBean.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_ICMSMatrix.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_ProductionLine.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeIIBeans.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/procCCeNFe_v1.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeVolBean.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_TaxLine.java.i
+data/base/src/org/adempierelbr/model/MLBRFormula.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MUnibanco.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteNFe_v2.00.xsd.i
+data/jboleto/src/img/356.png.i
+data/cce/src/org/adempierelbr/cce/beans/retevento/infevento/InfEvento.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/09_migration_script_5363527012622137283_postgresql.sql.i
+data/base/src/org/adempierelbr/util/NewTaxBR.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_TaxDefinition.java.i
+data/base/src/org/compiere/model/GridTab.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS00Bean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/025-LBR_FixTaxGroup.sql.i
+data/base/src/org/adempierelbr/validator/ValidatorInOut.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeCOFINSBean.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MBradesco.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/PISFactory.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/Valores.java.i
+data/nfe2/src/org/adempierelbr/nfe/SocketFactoryDinamico.java.i
+data/base/src/org/compiere/util/Env.java.i
+data/.project.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/NFeBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/06_Insert_Into_LBR_TaxStatus.sql.i
+data/boleto/src/org/adempierelbr/boleto/bank/MSantander_353.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/prod/NFeAdiBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN201Bean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/totais/NFeTotaisBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/NFeCancelamento.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfigRegion.java.i
+data/nfe2/src/org/adempierelbr/util/NFeTaxes.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retConsSitNFe_v2.00.xsd.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_TaxFormula.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/COFINSGrupoBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/procInutNFe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/envCCe_v1.00.xsd.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/015_LBR_Formula.sql.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/004-LBR_NCMTax.sql.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_CCe.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/totais/NFeRetTribBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/infadic/NFeObsContBean.java.i
+data/boleto/src/org/adempierelbr/boleto/I_Bank.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/NFePISAliqBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/DeclaracaoDI.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/inutNFe_v2.00.xsd.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_BPartner_Location.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dados/02_UPDATE_AD_Table_ScriptValidator.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/totais/NFeICMSTotBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeReboqueBean.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfiguration.java.i
+data/boleto/src/org/adempierelbr/process/ProcReturnCNAB.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeVeicTranspBean.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_TaxLine.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteConsStatServ_v2.00.xsd.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/009-SetNFWindowToTransaction.sql.i
+data/migration/to_lbrk/parte 3/059-ProcCancelProduction.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_PaymentTerm.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_TaxDefinition.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_Test.java.i
+data/nfe2/src/org/adempierelbr/util/SocketFactoryDinamico.java.i
+data/migration/to_lbrk/parte 4/Manutencao do Dicionario/02_migration_script_139061936911578916_postgresql.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteGrupo.java.i
+data/base/src/org/adempierelbr/callout/CalloutTax.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/EnderDest.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/INFePISBean.java.i
+data/cce/src/br/inf/portalfiscal/www/nfe/wsdl/recepcaoevento/RecepcaoEventoStub.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/inutilizacao/retorno/RetInfInutBean.java.i
+data/jboleto/src/org/jboleto/control/BMPFile.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteConsSitNFe_v2.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSPartBean.java.i
+data/nfe2/src/org/adempierelbr/process/ProcStatusServico.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/InfAdiFisco.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retCancNFe_v2.00.xsd.i
+data/base/src/org/adempierelbr/validator/ValidatorDocType.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/ipi/IPIFactory.java.i
+data/jboleto/src/img/341.png.i
+data/boleto/src/org/adempierelbr/model/MLBRCNAB.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeInutilizacao2.wsdl.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFePISBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/InutilizacaoNF.java.i
+data/migration/to_lbrk/parte 3/056-LBR-36_BoletoWeb.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS70Bean.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/018_Update_Callout_Rule_ScriptValidator.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_InvoicePaySchedule.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/retorno/RetornoConsultaNF.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/ICMSFactory.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_NotaFiscal.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/signature/NFeSignedInfoBean.java.i
+data/cce/src/wsdl/RecepcaoEvento.wsdl.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/consSitNFe_v2.01.xsd.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_TaxFormula.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_ICMSMatrix.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS30Bean.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_DigitalCertificate.java.i
+data/base/src/org/adempierelbr/model/MLBRCFOPLine.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentFisco.java.i
+data/boleto/src/org/adempierelbr/process/ProcGenerateCNAB.java.i
+data/jboleto/src/img/template.png.i
+data/migration/to_lbrk/parte 3/050-BF_LBR-6_RemoverPriceEnteredBR.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS60Bean.java.i
+data/migration/to_lbrk/parte 1/01_Update_Schema.sql.i
+data/jboleto/src/org/jboleto/JBoleto.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ValoresISSQN.java.i
+data/.classpath.i
+data/cce/src/org/adempierelbr/cce/beans/evento/infevento/InfEvento.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteReboque.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/transporte/NFeTransportadorBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFePISSTBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteLacres.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/ipi/NFeIPITribBean.java.i
+data/jboleto/src/img/104.png.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/NFeIdeBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/02_Insert_Into_LBR_Formula.sql.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retConsCad_v2.00.xsd.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_OrderLine.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/NFePISOutr.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeICMSBean.java.i
+data/nfe2/src/org/adempierelbr/process/ProcLotReturn.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/InfComex.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/converters/NFeConverter.java.i
+data/cce/src/org/adempierelbr/process/PrintFromXML.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_Locator.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retConsStatServ_v2.00.xsd.i
+data/base/src/org/adempierelbr/model/MLBRTaxName.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/consStatServ_v2.00.xsd.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/02_migration_script_6975541737191514829_postgresql.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/prod/NFeProdBean.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfestatusservico2/NfeStatusServico2CallbackHandler.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_Formula.java.i
+data/base/src/org/adempierelbr/model/MLBRNotaFiscalLine.java.i
+data/cce/src/org/adempierelbr/cce/beans/ProcEventoNFe.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfigProductGroup.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/PISBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/inutilizacao/retorno/RetInutNFeBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/prot/NFeInfProt.java.i
+data/boleto/src/org/adempierelbr/apps/form/GenCNAB.java.i
+data/cce/src/org/adempierelbr/model/MLBRCCe.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/prot/NFeProcBean.java.i
+data/migration/to_lbrk/parte 3/051-BF_LBR-6_RemoverCheckBoxPrecoBrasil.sql.i
+data/.settings/org.eclipse.jdt.core.prefs.i
+data/.settings/org.eclipse.core.resources.prefs.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/06_migration_script_1527002549280183414_postgresql.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/NFeCOFINSQtdeBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteConsSitNFe_v2.01.xsd.i
+data/nfe2/src/org/adempierelbr/nfe/beans/nItemBean.java.i
+data/base/src/org/adempierelbr/validator/VLBRTax.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/xmldsig-core-schema_v1.01.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/totais/ISSQNTotBean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_I_BPartner.java.i
+data/nfe2/src/org/adempierelbr/process/ProcLotTransmission.java.i
+data/jboleto/src/org/jboleto/JBoletoBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/enviNFe_v2.00.xsd.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeCancelamento2.wsdl.i
+data/base/src/org/adempierelbr/model/MLBRNFTax.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MBancoBrasil.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/003-FreightAmtOnInvoice.sql.i
+data/nfe/src/org/adempierelbr/process/ProcGenerateDanfe.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/INFeBean.java.i
+data/boleto/src/org/adempierelbr/apps/form/VGenBilling.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_NFLineTax.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/detevento/DetEventoCancel.java.i
+data/migration/to_lbrk/parte 3/062-NFeStatus-2012.002.sql.i
+data/base/src/org/adempierelbr/model/MLBRNCMTax.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MBancoReal.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_NCMTax.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfeinutilizacao2/NfeInutilizacao2Stub.java.i
+data/boleto/src/org/adempierelbr/model/MLBRBoleto.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_Warehouse.java.i
+data/base/src/org/compiere/model/GridField.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_InOut.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_DocType.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_AD_ClientInfo.java.i
+data/migration/to_lbrk/README.TXT.i
+data/boleto/src/org/adempierelbr/apps/form/WGenBilling.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_BPartner.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_CCe.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ImpostoIPINTBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/Transporte.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfecancelamento2/NfeCancelamento2Stub.java.i
+data/cce/src/org/adempierelbr/cce/beans/RetEnvEvento.java.i
+data/client/src/org/adempierelbr/grid/ed/VTaxesDialog.java.i
+data/base/src/org/adempierelbr/model/MLBRICMSMatrix.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/emit/NFeEmitBean.java.i
+data/base/src/org/adempierelbr/model/MLBRNCM.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/011-FixIdendificadorLegalMessage.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN102Bean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/ide/NFeInfoNFRef.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/consSitNFe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/process/ProcGenerateNFEXml.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ValoresRetTrib.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retInutNFe_v2.00.xsd.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfigBPGroup.java.i
+data/migration/to_lbrk/parte 3/067-OrigemDoProduto.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/COFINSOutrGrupoBean.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MCaixaEconomica.java.i
+data/nfe/src/org/adempierelbr/nfe/exceptions/NFeXMLException.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentEmit.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Tax.java.i
+data/nfe/src/org/adempierelbr/nfe/annotations/NFeTextField.java.i
+data/cce/src/br/inf/portalfiscal/www/nfe/wsdl/recepcaoevento/RecepcaoEventoCallbackHandler.java.i
+data/migration/to_lbrk/parte 3/068-FlagDocumentoProprioNFe.sql.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/026_UPDATE_NCM.sql.i
+data/jboleto/src/img/399.png.i
+data/cce/src/reports/ReportCCe.jasper.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/leiauteInutNFe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/util/NFeUtil.java.i
+data/jboleto/src/img/033.png.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/03_Insert_Into_LBR_NCM.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/retorno/InfProtBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/03_Insert_Into_LBR_NCM.sql.d
+data/nfe2/src/org/adempierelbr/nfe/beans/LinhaNFEBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/cobranca/NFeFatBean.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/NfeConsulta2.wsdl.i
+data/nfe2/src/org/adempierelbr/nfe/beans/NFEReferenciadaBean.java.i
+data/base/src/org/adempiere/process/RMACreateOrder.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfeinutilizacao2/NfeInutilizacao2CallbackHandler.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/Cobranca.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/NFeCOFINSNTBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/procCancNFe_v2.00.xsd.i
+data/jboleto/src/img/347.png.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/consReciNFe_v2.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/converters/ICMSConverter.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/012-FixSelectionColumn.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfestatusservico/retorno/RetConsultaStatusServicoBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/compra/NFeCompraBean.java.i
+data/migration/to_lbrk/parte 3/053-LBR_26_RevertScripts.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/signature/NFeSignature.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/After_Migration/01_Drop_Backup_Tables.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_City.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/ipi/NFeIPINTBean.java.i
+data/nfe2/src/org/adempierelbr/process/ProcGenerateDistribution.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentLocalEntrega.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeImpostoBean.java.i
+data/nfe2/src/org/adempierelbr/util/XMLUtil.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/04_Create_Column_Field_M_Product.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfestatusservico/ConsultaStatusServicoBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/InformacoesNFEReferenciadaBean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Country.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_AD_OrgInfo.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/retorno/RetCancNFeBean.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_NotaFiscalLine.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfeconsulta2/NfeConsulta2CallbackHandler.java.i
+data/nfe2/ws/src/org/adempierelbr/nfe/sp/CadConsultaCadastro2.wsdl.i
+data/base/src/org/adempierelbr/util/BPartnerUtil.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxLine.java.i
+data/base/src/org/adempierelbr/validator/ValidatorInvoice.java.i
+data/cce/src/org/adempierelbr/cce/beans/retevento/RetEvento.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nferetrecepcao2/NfeRetRecepcao2CallbackHandler.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_NCM.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN202Bean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/NFeLEntregaBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/010-NoBaseLanguage.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ProdutosNFEBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/002_LBR_ICMSMatrix.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Bank.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS51Bean.java.i
+data/migration/to_lbrk/parte 3/052-BF_LBR-9-SincronizarCampoRPSStatus.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_AD_User.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/PISOutrGrupoBean.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfeconsulta2/NfeConsulta2Stub.java.i
+data/nfe/src/org/adempierelbr/nfe/annotations/NFeNumericField.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxDefinition.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_NotaFiscal.java.i
+data/jboleto/src/img/template2.png.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_AD_Table.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/013_LBR_TaxLine.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_Production.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/001_LBR_NCM.sql.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/005-TaxDefinition.sql.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/retEnvCCe_v1.00.xsd.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/05_ADD_Column_LBR_RecalculatTax.sql.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/017_Remove_CalloutTosello_Method_TaxBR.sql.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfestatusservico2/NfeStatusServico2Stub.java.i
+data/boleto/src/org/adempierelbr/boleto/bank/MSantander_033.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retEnviNFe_v2.00.xsd.i
+data/nfe2/src/org/adempierelbr/nfe/beans/PISGrupoBean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_AD_Sequence.java.i
+data/base/src/org/adempierelbr/util/TextUtil.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/cobranca/NFeCobrBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/dest/NFeDestEndBean.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_TaxStatus.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_TaxStatus.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/NFERefenciadaBean.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nfecancelamento2/NfeCancelamento2CallbackHandler.java.i
+data/migration/to_lbrk/parte 4/Manutencao do Dicionario/01_migration_script_967845381888892468_postgresql.sql.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/consCad_v2.00.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN900Bean.java.i
+data/base/src/org/adempierelbr/model/MLBRTax.java.i
+data/base/src/org/adempierelbr/model/MLBRTaxConfigBPartner.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/INFeICMSBean.java.i
+data/migration/to_lbrk/parte 3/72-DesabilitarCampoLoteJanelaNotaFiscal.sql.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/016_LBR_TaxFormula.sql.i
+data/nfe2/src/org/adempierelbr/util/AssinaturaDigital.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_NCMTax.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/014_LBR_NFLineTax.sql.i
+data/nfe2/src/org/adempierelbr/model/MLBRDigitalCertificate.java.i
+data/base/src/org/adempierelbr/model/MLBRCFOP.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/tiposBasico_v1.03.xsd.i
+data/base/src/org/adempierelbr/model/MLBRTaxFormula.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS40Bean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_M_PriceList.java.i
+data/nfe/src/org/adempierelbr/nfe/NFeXMLGrupoMGenerator.java.i
+data/base/src/org/adempierelbr/validator/VLBRInvoice.java.i
+data/migration/to_lbrk/parte 3/057-LBR-39_CartaDeCorrecao_CCe.sql.i
+data/nfe2/src/org/adempierelbr/grid/VCreateFromNFeLotUI.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS10Bean.java.i
+data/jboleto/src/img/353.png.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_InvoiceLine.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/converters/COFINSConverter.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/detevento/I_DetEvento.java.i
+data/migration/to_lbrk/parte 3/060_LBR-54_CertificadoA3.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeCOFINSSTBean.java.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Order.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/signature/NFeReferenceBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/pis/NFePISNT.java.i
+data/boleto/src/org/adempierelbr/apps/form/GenBilling.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_NotaFiscalLine.java.i
+data/nfe2/src/org/adempierelbr/util/NFeEmail.java.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_Formula.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/08_migration_script_2829638420368200142_postgresql.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ValoresICMS.java.i
+data/boleto/src/org/adempierelbr/apps/form/VGenCNAB.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/NFeCOFINSAliqBean.java.i
+data/cce/src/org/adempierelbr/cce/beans/EnvEvento.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/COFINSNTGrupoBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSN101Bean.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nferecepcao2/NfeRecepcao2CallbackHandler.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retConsSitNFe_v2.01.xsd.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS20Bean.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/006-LBR_TaxStatus.sql.i
+data/dbPort/src/org/adempierelbr/wrapper/I_W_C_Invoice.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/ide/NFeNFRefBean.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dicionario/03_migration_script_6407665376511294348_postgresql.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/inutilizacao/InfInutBean.java.i
+data/lib/jasperreports-3.6.2.jar.i
+data/lib/jasperreports-3.6.2.jar.d
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentLocRetirada.java.i
+data/boleto/src/org/adempierelbr/apps/form/VFormBoleto.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/NFeIPIBean.java.i
+data/dbPort/src/org/adempierelbr/model/X_LBR_NCM.java.i
+data/base/src/org/adempierelbr/callout/CalloutOrder.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/IdentDest.java.i
+data/jboleto/src/img/001.png.i
+data/nfe2/src/org/adempierelbr/nfe/beans/EnderEmit.java.i
+data/cce/src/org/adempierelbr/cce/beans/evento/Evento.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMS90Bean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/CCe_v1.00a/leiauteCCe_v1.00.xsd.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/01_Insert_Into_Model_Validator.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/dest/NFeDestBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/TransporteGrupoVeiculos.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/cofins/INFeCOFINSBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/PISNTGrupoBean.java.i
+data/cce/src/org/adempierelbr/cce/beans/Signature.java.i
+data/nfe2/ws/src/br/inf/portalfiscal/www/nfe/wsdl/nferecepcao2/NfeRecepcao2Stub.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/DadosNFE.java.i
+data/boleto/src/org/adempierelbr/util/ReturnCNABUtil.java.i
+data/boleto/src/org/adempierelbr/callout/CalloutBank.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/ImpostoIPIGrupoBean.java.i
+data/client/src/org/adempierelbr/grid/ed/VTaxes.java.i
+data/cce/src/org/adempierelbr/cce/beans/evento/infevento/detevento/DetEvento.java.i
+data/migration/to_lbrk/parte 1/Manutencao do Dicionario/007-CalloutCFOP.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/det/imposto/icms/NFeICMSSTBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/04_Insert_Into_LBR_TaxName.sql.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/nfeConsultaNF/retorno/InfCancBean.java.i
+data/nfe/src/org/adempierelbr/nfe/v200/beans/infnfe/infadic/NFeInfAdicBean.java.i
+data/migration/to_lbrk/parte 1/Manutencao dos Dados/05_INSERT_INTO_LBR_TaxFormula.sql.i
+data/nfe2/src/org/adempierelbr/nfe/beans/COFINSBean.java.i
+data/nfe2/src/org/adempierelbr/nfe/xsd/retConsReciNFe_v2.00.xsd.i
+data/dbPort/src/org/adempierelbr/model/I_LBR_NFLineTax.java.i
+data/nfe/src/org/adempierelbr/nfe/NFeXMLGenerator.java.i
+data/nfe2/src/org/adempierelbr/nfe/beans/InfAssinatura.java.i
+data/migration/to_lbrk/parte 2/Manutencao Dados/01_INSERT_INTO_C_Tax.sql.i

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="base/src"/>
+	<classpathentry kind="src" path="dbPort/src"/>
+	<classpathentry kind="src" path="nfe/src"/>
+	<classpathentry kind="src" path="client/src"/>
+	<classpathentry kind="src" path="cce/src"/>
+	<classpathentry kind="src" path="nfe2/src"/>
+	<classpathentry excluding="src/" kind="src" path="nfe2/ws"/>
+	<classpathentry kind="src" path="nfe2/ws/src"/>
+	<classpathentry kind="src" path="boleto/src"/>
+	<classpathentry exported="true" kind="lib" path="lib/groovy-all-2.1.8-20131014.144905-25.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jasperreports-3.7.3.jar"/>
+	<classpathentry kind="lib" path="lib/xalan.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adempierelbr"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adempiere_360"/>
+	<classpathentry kind="lib" path="lib/sunpkcs11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
